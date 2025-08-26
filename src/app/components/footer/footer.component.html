@@ -1,0 +1,48 @@
+<div id="footer">
+  <div class="footer-container">
+    <div class="footer-item1">
+      <img src="../../../assets/images/footer/Group 7.svg" />
+      <span>2023 MYGG. All rights reserved.</span>
+    </div>
+    <div class="footer-item2">
+      <div class="footer-menu-wrapper">
+        <div class="item" id="item-a" current-path="/privacy-policy">
+          <a
+            routerLink="/privacy-policy"
+            [innerHTML]="'footer.privacy_policy' | translate"
+          >
+            Privacy Policy
+          </a>
+        </div>
+        <div class="item" id="item-b" current-path="/term-of-service">
+          <a
+            routerLink="/term-of-service"
+            [innerHTML]="'footer.terms_of_service' | translate"
+          >
+            Terms of Service
+          </a>
+        </div>
+        <!-- <div class="item" id="item-c">
+          <a routerLink="/" [innerHTML]="'footer.faq' | translate"> FAQ </a>
+        </div> -->
+        <!-- <div class="item" id="item-d">
+          <a routerLink="/" [innerHTML]="'footer.user_agreement' | translate"> User Agreement </a>
+        </div> -->
+        <!-- <div class="item" id="item-e">
+          <a routerLink="/career" [innerHTML]="'footer.career' | translate"> Career </a>
+        </div> -->
+        <!-- <div class="item" id="item-f" current-path="">
+          <a routerLink="/" [innerHTML]="'footer.services' | translate"> Service </a>
+        </div> -->
+        <div class="item" id="item-g" current-path="/cookie-policy">
+          <a
+            routerLink="/cookie-policy"
+            [innerHTML]="'footer.cookie_policy' | translate"
+          >
+            Cookie Policy</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

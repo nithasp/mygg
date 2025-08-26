@@ -1,0 +1,49 @@
+<div
+  id="ticket-detail"
+  class="profile-content mt-14 bg-white shadow-[0px_8px_12.5px_0.5px_#020e26] relative px-12 py-8"
+  [ngClass]="ticketStatus !== 'complete' ? 'min-h-[90vh]' : ''"
+>
+
+  <div class="ticket-detail-container">
+    <div class="item ticket-no">
+      <span class="title">Ticket No. :</span>
+      <span>{{ ticketDetail.id || 'xxx' }}</span>
+    </div>
+    <div class="item date">
+      <span class="title">Create Date : </span>
+      <span>{{ ticketDetail.issue_date || 'xxx' }}</span>
+    </div>
+    <div class="item ticket-status">
+      <span class="title">Status : </span>
+      <span
+        class="text-bold"
+        [ngClass]="
+          ticketDetail.status === 'Complete'
+            ? 'text-green-800'
+            : ticketDetail.status === 'Pending'
+            ? 'text-yellow-600'
+            : ''
+        "
+      >
+        {{ ticketDetail.status || 'xxx' }}
+      </span>
+    </div>
+    <div class="item subject">
+      <span class="title">Subject : </span>
+      <span>{{ ticketDetail.subject || 'xxx' }}</span>
+    </div>
+    <div class="item description-message">
+      <span class="title">Description : </span>
+      <textarea name="" id="" readonly>{{ ticketDetail.description || 'xxx' }}</textarea>
+    </div>
+    <div class="item support-message" *ngIf="ticketStatus === 'complete'">
+      <span class="title">Support : </span>
+      <textarea name="" id="" readonly>{{ ticketDetail.description || 'xxx' }}</textarea>
+    </div>
+  </div>
+
+  <mygg-back-button
+    routerLink="/profile/ticket-categories"
+    class="absolute bottom-0 left-0"
+  ></mygg-back-button>
+</div>

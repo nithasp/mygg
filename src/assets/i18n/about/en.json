@@ -1,0 +1,35 @@
+{
+  "about_us": {
+    "section1": {
+      "title": "WE ARE",
+      "content": "MYGG is an international publisher formed as a joint venture <div class='block'></div> between two listed companies in Thailand, Master Ad Pcl, <div class='block'></div> Yggdrazil Group Pcl Carrying the success of the well-known series <div class='block'></div> Home Sweet Home. Our mission is to deliver the best"
+    },
+    "section2": {
+      "item1": " The top-tier Thailand visual effects(VFX), Animation, and VR Studio provide the full-service production; Ads Documentary Films, Game, Move, TV Series, and VR360 with highly skilled professionals and world class innovation with the amount of 200 million dollars Market Capitalization value. Yggdrazil has cooperated with Well-known international companies in various industries; SquareEnix - Final Fantasy XV KingGlaive, Chevrolet Toyota, Coca-Cola, Nestle, nivea, KFC Animation (Nezha), The First, Home Sweet Home and many more. <br /><br />Since 2007, Yggdrazil has got more than 30 awards both domestic and international eg; New York Festival 2021 Gold Awards, Gold BIDC Awards, Media Asia Advertising, Asia pacific Advertising, etc.",
+      "item2": "Master Ad public company limited or “MACO” is one of the leaders in the outdoor media industry with diverse media advertising of static and digital media, covering Thailand and ASEAN. Along with the smart connection platform across the ASEAN region in conjunction with the principles of good governance and social and environmental responsibility."
+    },
+    "section3": {
+      "title": "OUR AWARDS"
+    },
+    "section4": {
+      "address1": {
+        "1": "THAILAND<br />BUSINESS",
+
+        "2": "348 2nd Floor Soi Ladprao 94 (Punjamitr), Phlapphla, Wangthonglang, Bangkok, Thailand 10310",
+        "email": "Email : info@mygg-game.com",
+        "tel": "Tel : (662) 934 4364"
+      },
+      "address2": {
+        "1": "GLOBAL<br />BUSINESS",
+        "2": {
+          "name": "PIYAPON SUKSAN (ZEN)",
+          "email": "Email: globalbd@ygg-cg.com"
+        },
+        "3": {
+          "name": "JANTAKAN SIROROT (KARN)",
+          "email": "Email: producer@ygg-cg.com"
+        }
+      }
+    }
+  }
+}

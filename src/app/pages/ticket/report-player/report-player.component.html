@@ -1,0 +1,85 @@
+<div id="report-player" class="topic">
+  <div class="sub-inner">
+    <div class="wrapper">
+      <div class="title">
+        <img
+          src="../../../../assets/images/ticket/UI_Create_mobile 1.png"
+          alt="ticket-icon"
+        />
+        <h1 [innerHTML]="'ticket.report_player.title' | translate">
+          Report player
+        </h1>
+      </div>
+      <form [formGroup]="reportPlayerForm" (ngSubmit)="handleSubmit()">
+        <div class="form-wrapper">
+          <div class="type-of-report-issue item">
+            <div class="input-wrapper">
+              <label
+                for="subject"
+                [innerHTML]="'ticket.report_player.topic' | translate"
+                >Please select the type to report</label
+              >
+              <div class="select">
+                <app-mygg-select
+                  optionPlaceholder="Select"
+                  [optionItems]="banTopics"
+                  (changeTopic)="handleTopic($event)"
+                ></app-mygg-select>
+              </div>
+              <input
+                type="text"
+                class="hidden"
+                formControlName="type_of_report"
+              />
+            </div>
+          </div>
+          <div class="description item">
+            <div class="input-wrapper">
+              <label
+                for="description"
+                [innerHTML]="'ticket.description' | translate"
+                >Description</label
+              >
+              <textarea
+                class=""
+                id="description"
+                type="text"
+                placeholder="Placeholder"
+                formControlName="description"
+              ></textarea>
+            </div>
+          </div>
+          <div class="attachment item">
+            <div class="input-wrapper">
+              <label
+                for="attachment"
+                [innerHTML]="'ticket.attachment.title' | translate"
+                >Attachment(s)-(Optional)</label
+              >
+              <app-mygg-dropzone></app-mygg-dropzone>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button
+            type="button"
+            class="btn-border"
+            routerLink="../"
+            [innerHTML]="'ticket.back' | translate"
+          >
+            Back
+          </button>
+          <button
+            type="submit"
+            class="btn-filled"
+            routerLink="../"
+            [innerHTML]="'ticket.submit' | translate"
+            [disabled]="reportPlayerForm.status === 'INVALID'"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

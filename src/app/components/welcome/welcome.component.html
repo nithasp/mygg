@@ -1,0 +1,25 @@
+<div id="welcome">
+  <div class="inner">
+    <div class="welcome-section1">
+      <div class="text">
+        <span [innerHTML]="'welcome.title' | translate"></span>
+      </div>
+      <div class="username">
+        <img
+          src="../../../assets/images/welcome/welcome-icon.png"
+          alt="welcome-icon"
+        />
+        {{ userInfo?.username || 'usernamehere' }}
+      </div>
+    </div>
+    <div class="welcome-section2">
+      <div class="coin">
+        <img
+          src="../../../assets/images/welcome/coin-icon.png"
+          alt="coin-icon"
+        />
+        <span>{{ userInfo ? '0' : '0' }}</span>
+      </div>
+    </div>
+  </div>
+</div>

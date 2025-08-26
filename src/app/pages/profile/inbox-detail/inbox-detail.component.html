@@ -1,0 +1,67 @@
+<div id="inbox-detail">
+  <div class="inner">
+    <div class="inbox-detail-section1">
+      <div class="back-btn" routerLink="../">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="14"
+          viewBox="0 0 15 14"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.73898 2.04689C8.18958 1.59628 8.18958 0.865708 7.73898 0.415103C7.28837 -0.0355029 6.5578 -0.0355029 6.10719 0.415103L0.337954 6.18434C-0.112651 6.63494 -0.112651 7.36552 0.337954 7.81613L6.10719 13.5854C6.5578 14.036 7.28837 14.036 7.73898 13.5854C8.18958 13.1348 8.18958 12.4042 7.73898 11.9536L3.93949 8.15408H13.8462C14.4834 8.15408 15 7.63749 15 7.00024C15 6.36298 14.4834 5.84639 13.8462 5.84639H3.93948L7.73898 2.04689Z"
+            fill="#051640"
+          />
+        </svg>
+        <span [innerHTML]="'inbox_info.back' | translate">Back</span>
+      </div>
+      <div class="trash-icon" (click)="deleteItem()">
+        <img
+          src="../../../../assets/images/inbox/trash-icon-active.png"
+          alt="trash-icon-active"
+          class="trash-icon-active"
+        />
+      </div>
+    </div>
+    <div class="inbox-detail-section2">
+      <div class="title">
+        <h1>{{ itemDetail?.title || 'Title' }}</h1>
+        <div class="date">{{ itemDetail?.date || 'Date' }}</div>
+      </div>
+      <div class="content has-image" *ngIf="itemDetail?.image">
+        <div class="image-content">
+          <img [src]="itemDetail?.image" alt="itemDetail?.title" />
+        </div>
+        <p [innerHTML]="itemDetail?.content || 'content'"></p>
+      </div>
+      <div class="content no-image" *ngIf="!itemDetail?.image">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit
+          vitae velit vitae interdum. In hac habitasse platea dictumst. Vivamus
+          lectus dui, gravida vel leo pharetra, porttitor consectetur purus. Ut
+          placerat justo vel ligula fringilla commodo. Morbi mi nisi, semper et
+          tincidunt eget, finibus ut nisi. Nullam nec est quis neque fringilla
+          vehicula Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+          blandit vitae velit vitae interdum. In hac habitasse platea dictumst.
+          Vivamus lectus dui, gravida vel leo pharetra, porttitor consectetur
+          purus. Ut placerat justo vel ligula fringilla commodo. Morbi mi nisi,
+          semper et tincidunt eget, finibus ut nisi. Nullam nec est quis neque
+          fringilla vehicula Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit. Nam blandit vitae velit vitae interdum. In hac habitasse platea
+          dictumst. Vivamus lectus dui, gravida vel leo pharetra, porttitor
+          consectetur purus. Ut placerat justo vel ligula fringilla commodo.
+          Morbi mi nisi, semper et tincidunt eget, finibus ut nisi. Nullam nec
+          est quis neque fringilla vehicula...Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit. Nam blandit vitae velit vitae interdum.
+          In hac habitasse platea dictumst. Vivamus lectus dui, gravida vel leo
+          pharetra, porttitor consectetur purus. Ut placerat justo vel ligula
+          fringilla commodo. Morbi mi nisi, semper et tincidunt eget, finibus ut
+          nisi. Nullam nec est quis neque fringilla vehicula...
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

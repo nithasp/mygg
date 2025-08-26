@@ -1,0 +1,13 @@
+{
+  "ticket_categories": {
+    "title": "หมวดหมู่",
+    "submit": "ส่ง",
+    "table": {
+      "no": "No.",
+      "ticket_no": "Ticket ลำดับที่",
+      "date": "วันที่สร้าง",
+      "subject": "หัวเรื่อง",
+      "status": "สถานะ"
+    }
+  }
+}

@@ -1,0 +1,241 @@
+#sign-up {
+  min-height: 138vh;
+  background: url(../../../assets/images/sign-up/sign-up-bg.jpg) no-repeat;
+  background-size: cover;
+  font-size: 16px;
+}
+
+.sign-up-container {
+  padding: 0 30px;
+}
+.content {
+  padding: 152px 0 124px 0;
+  .title {
+    font-family: 'Myriad-Pro-SemiBold';
+    text-align: center;
+    color: #fff;
+
+    font-size: 40px;
+    margin-bottom: 24px;
+  }
+}
+form {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+
+  max-width: 1146px;
+  min-height: 970px;
+  margin: 0 auto;
+  padding: 50px 146px 40px 146px;
+
+  .form-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+  }
+
+  .item {
+    position: relative;
+    margin-top: 33px;
+  }
+
+  .telephone {
+    min-height: 96px;
+  }
+  .telephone-form-wrapper {
+    display: grid;
+    grid-template-columns: clamp(50px, 35%, 126px) 1fr;
+    gap: 20px;
+    max-height: 96px;
+  }
+
+  .country {
+    z-index: 2;
+  }
+
+  .gender {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .gender-wrapper {
+      display: flex;
+      position: relative;
+      top: 15px;
+    }
+
+    label {
+      margin: 0;
+    }
+    input[type='radio'] {
+      margin-right: 8px;
+    }
+  }
+  .gender-item {
+    display: flex;
+    align-items: center;
+    margin-right: 16px;
+  }
+  .gender-item.male {
+    margin-right: 32px;
+  }
+
+  .policy {
+    margin-top: 40px;
+    .input-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 530px;
+      padding-left: 75px;
+    }
+    .wrapper {
+      display: flex;
+      align-items: center;
+    }
+    .checkbox-wrapper {
+      position: relative;
+      top: -8px;
+    }
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  .social-login {
+    text-align: center;
+    margin-top: 35px;
+    font-family: 'Myriad-Pro-SemiBold';
+    .icon-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+    .social-icon {
+      width: 54px;
+      height: 54px;
+      margin: 13px 24px 0 0;
+      cursor: pointer;
+    }
+    .social-icon:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .line {
+    width: 100%;
+    height: 1px;
+    background: #939498;
+    margin: 37px 0 40px 0px;
+  }
+}
+.text-error {
+  font-family: 'Inter-Medium';
+  color: #ac2028;
+  font-size: 12px;
+}
+.note {
+  color: #515151;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.register-button {
+  text-align: center;
+  margin-top: 40px;
+  button {
+    max-width: 272px;
+    width: 100%;
+    padding: 8px 16px;
+    font-family: 'Myriad-Pro-SemiBold';
+  }
+}
+
+.sign-in {
+  text-align: center;
+  .text {
+    font-family: 'Myriad-Pro-SemiBold';
+  }
+  button {
+    max-width: 272px;
+    width: 100%;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-family: 'Myriad-Pro-SemiBold';
+    margin-top: 13px;
+  }
+}
+
+@media (max-width: 1024px) {
+  form {
+    padding: 50px 49px 40px 49px;
+    .form-wrapper {
+      grid-template-columns: 50% 50%;
+    }
+    .gender-item {
+      margin-right: 12px;
+    }
+    .gender-item.male {
+      margin-right: 12px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  input {
+    max-width: 100%;
+  }
+  form {
+    .form-wrapper {
+      grid-template-columns: 100%;
+    }
+    .gender {
+      .error-msg {
+        margin-top: 17px;
+      }
+    }
+    .gender-wrapper {
+      flex-wrap: wrap;
+    }
+    .gender-item {
+      margin-right: 0;
+      flex-basis: 50%;
+    }
+    .gender-item.male {
+      margin-right: 0;
+    }
+    .no-gender {
+      margin-top: 16px;
+    }
+
+    .social-icon {
+      margin: 13px 16px 0 0 !important;
+    }
+    .social-icon:last-child {
+      margin-right: 0 !important;
+    }
+
+    .policy {
+      .input-wrapper {
+        align-items: flex-start;
+
+        max-width: initial;
+        padding-left: 0;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .sign-up-container {
+    padding: 0 20px;
+  }
+  form {
+    padding: 29px 8px 40px 8px;
+    .telephone-form-wrapper {
+      grid-template-columns: 1fr;
+    }
+    .telephone-form-wrapper {
+      max-height: initial;
+    }
+  }
+}

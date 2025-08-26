@@ -1,0 +1,23 @@
+<div
+  class="container mx-auto w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-x-0 gap-y-5 text-center"
+>
+  <div class="game flex flex-col items-center" *ngFor="let game of topupGames">
+    <a class="image-wrapper w-auto h-auto grow flex items-end" routerLink="/{{game.link}}">
+      <img
+        src="{{ game.image }}"
+        alt="{{ game.game_name }}"
+        class="{{ game.class }}"
+        *ngIf="game.image"
+      />
+      <div class="h-64 w-56 mx-auto" *ngIf="!game.image">
+        <img src="{{ renderImage() }}" alt="game.game_name" />
+      </div>
+    </a>
+
+    <p
+      class="game-name text-2xl text-[#05173d] light-intense-white font-bold whitespace-nowrap" [innerHTML]="game.game_name"
+    >
+      <!-- {{ game.game_name }} -->
+    </p>
+  </div>
+</div>

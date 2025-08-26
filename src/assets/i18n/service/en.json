@@ -1,0 +1,42 @@
+{
+  "service": {
+    "title": "CUSTOMER SERVICE",
+    "issue_account": {
+      "title": "Issues with<br />MYGG account",
+      "item1": {
+        "title": "How to create a MYGG ID",
+        "content": "<li> Go to the website <a href=\"https://mygg.games\">https://mygg.games</a> </li> <li>Click on the \"Sign up\" button</li> <li>Fill in your username and password</li> <li>Click \"Agree.\"</li>"
+      },
+      "item2": {
+        "title": "How to reset your password",
+        "content": "<p> Visit the website <a href=\"https://mygg.games/reset-password\">https://mygg.games/reset-password</a> to reset your password. Once you have successfully changed your password, you will be able to log in to the <a href=\"https://mygg.games\">https://mygg.games</a> website immediately</p>"
+      }
+    },
+    "issue_topup": {
+      "title": "Issues with with<br />topping up",
+      "item1": {
+        "title": "How to top up via MYGG",
+        "content": "Go to the website: <a href=\"https://mygg.games/topup\">https://mygg.games/topup</a> and click on the Game Icon. </li> <li>Enter your UID and log in.</li> <li> Verify if your in-game name is correct, and then choose your preferred method of topping up.</li>"
+      },
+      "item2": {
+        "title": "Report an issue with not receiving Diamond after topping up",
+        "content": "Send the details of the issue encountered, including a screenshot of the top-up receipt, the top-up time, and specify the issue of not receiving Diamond. Send to the support team via email: <a href=\"mailto:support@mygg-game.com\">support@mygg-game.com</a>"
+      },
+      "item3": {
+        "title": "Report an issue with topping up the wrong ID",
+        "content": "Send the details of the issue encountered, including a screenshot of the top-up receipt, the top-up time, and specify the issue of not receiving Diamond. Send to the support team via email: <a href=\"mailto:support@mygg-game.com\"> support@mygg-game.com </a>"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "item1": {
+        "title": "Policies and penalties",
+        "content": "<p>Game Misconduct Penalty</p> <p>MYGG team hereby announces the penalty rules for game misconduct:</p> <br /> <ol> <li> 1. If the team finds that a player is using cheating programs, including unauthorized modifications or alterations to game files, or engaging in behaviors that exploit game vulnerabilities, appropriate penalties will be imposed, including temporary suspension for xx days or permanent ID suspension. </li> <li> 2. Attempts to exploit game system bugs or errors for unauthorized benefits will result in penalties determined by the team, with the maximum penalty being permanent ID suspension. </li> <li> 3. Supporting or promoting cheat programs in any case will result in permanent ID suspension. </li> <li> 4. For inquiries regarding account suspension, the MYGG team reserves the right not to disclose any evidence publicly. Players can only contact the team through the problem report link. </li> <li> 5. The MYGG team will consider and provide the details of the evidence as appropriate. </li> </ol> <br /> <p>Note:</p> <p> - The team cannot be held responsible in any case if players are deceived by Real Money Transactions, as it is the player's own choice to take the risk. </p> <p> - Accounts that have been penalized for verified violations will not have their penalties reduced or lifted under any circumstances. </p>"
+      },
+      "item2": {
+        "title": "What to do when you encounter a bug?",
+        "content": "Submit details of bugs and encountered issues along with screenshot images or videos to the MYGG team via email: <a href=\"mailto:support@mygg-game.com\">support@mygg-game.com</a>"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.detail {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    margin-bottom: 0.7rem;
+    span:nth-child(2) {
+      text-align: right;
+    }
+  }
+  .card-info {
+    label {
+      font-size: 17px;
+      color: #b1b1b1;
+      display: block;
+  
+      margin: 0 0 0.3rem 0.1rem;
+    }
+    input {
+      border-radius: 10px;
+      border: solid 3px #868686;
+      padding: 0.3rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .save-info {
+    span {
+      font-size: 15.5px;
+      color: #7f7f7f;
+    }
+  }
+  
+  .order-details {
+    position: relative;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 2.5%;
+      right: 0;
+      border: solid 2px #051640;
+      width: 1px;
+      height: 75%;
+    }
+  }
+  

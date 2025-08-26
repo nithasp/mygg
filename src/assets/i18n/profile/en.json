@@ -1,0 +1,46 @@
+{
+  "profile": {
+    "title": "MYGG ID Account",
+    "sub_title": "Personal Detail",
+    "sidebar": {
+      "profile": "Profile",
+      "inbox": "Inbox",
+      "topup": "Top up",
+      "redemption": "Redemption",
+      "purchase_history": "Purchase History",
+      "support": "Support",
+      "ticket_history": "Ticket History",
+      "sign_out": "Sign out"
+    },
+    "form": {
+      "username": "Username",
+      "email": {
+        "title": "Email",
+        "note": "You can use this email address to retrieve your password."
+      },
+      "firstname": "First name",
+      "lastname": "Surname",
+      "date_of_birth": "Date of birth",
+      "country": "Country",
+      "country_code": "Code",
+      "phone_number": "Phone number",
+      "gender": {
+        "title": "Gender",
+        "male": "Male",
+        "female": "Female",
+        "optional": "Rather not to say"
+      },
+      "error": {
+        "required": "The field is required.",
+        "email": {
+          "pattern": "Email is invalid"
+        },
+        "mobile_number": {
+          "pattern": "Phone number must be numeric digits only."
+        }
+      }
+    },
+    "cancel": "Cancel",
+    "submit": "Save"
+  } 
+}

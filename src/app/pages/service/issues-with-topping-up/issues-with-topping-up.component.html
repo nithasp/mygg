@@ -1,0 +1,36 @@
+<div id="issues-with-topping-up" class="service-content">
+  <accordion [isAnimated]="true" [closeOthers]="true">
+    <accordion-group [heading]="'service.issue_topup.item1.title' | translate">
+      <ol [innerHTML]="'service.issue_topup.item1.content' | translate">
+        <li>
+          Go to the website:
+          <a href="{{ mainUrl }}/topup">{{ mainUrl }}/topup</a>
+          and click on the Game Icon.
+        </li>
+        <li>Enter your UID and log in.</li>
+        <li>
+          Verify if your in-game name is correct, and then choose your preferred
+          method of topping up.
+        </li>
+      </ol>
+    </accordion-group>
+    <accordion-group
+    [heading]="'service.issue_topup.item2.title' | translate"
+    >
+      <p [innerHTML]="'service.issue_topup.item2.content' | translate">
+        Send the details of the issue encountered, including a screenshot of the
+        top-up receipt, the top-up time, and specify the issue of not receiving
+        Diamond. Send to the support team via email:
+        <a href="mailto:support@mygg-game.com">support@mygg-game.com</a>
+      </p>
+    </accordion-group>
+    <accordion-group [heading]="'service.issue_topup.item3.title' | translate">
+      <p [innerHTML]="'service.issue_topup.item3.content' | translate">
+        Send the details of the issue encountered, including a screenshot of the
+        top-up receipt, the top-up time, and specify the issue of not receiving
+        Diamond. Send to the support team via email:
+        <a href="mailto:support@mygg-game.com"> support@mygg-game.com </a>
+      </p>
+    </accordion-group>
+  </accordion>
+</div>

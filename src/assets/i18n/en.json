@@ -1,0 +1,139 @@
+{
+  "auth": {
+    "sign_in": "Log in",
+    "sign_up": "Sign up",
+    "sign_out": "Sign out"
+  },
+  "topbar": {
+    "item1": "Our Services",
+    "item2": "Top Up",
+    "item3": "Support",
+    "item4": "Contact Us",
+    "item5": "Who we are",
+    "item6": "Career",
+    "item7": "Sign up",
+    "item8": "Log in"
+  },
+  "footer": {
+    "item1": "Privacy Policy",
+    "item2": "Terms of Service",
+    "item3": "FAQ",
+    "item4": "User Agreement",
+    "item5": "Career",
+    "item6": "Services"
+  },
+  "home": {
+    "section1": {
+      "title1": "Game Publisher and",
+      "title2": " Digital Entertainment"
+    },
+    "section2": {
+      "2_1": {
+        "title": "Why MYGG is a Powerful Choice",
+        "content": "MYGG COMPANY LIMITED is a new and innovative company that specializes in game publishing and digital entertainment."
+      },
+      "2_2": {
+        "sub_title": "We offer 3 core services",
+        "item1": {
+          "title": "Publisher Service",
+          "detail": "We are a leading online game developer and provider in Thailand, known for our popular game franchise Home Sweet Home: Online. Our goal is to elevate the Thai game industry to the global stage while providing the best gaming experience to players in Southeast Asia."
+        },
+        "item2": {
+          "title": "Marketing Service",
+          "detail": "We provide all-in-one online and offline marketing services to help you achieve the best results. Our high-quality team offers expert consultation and support throughout every step of the process."
+        },
+        "item3": {
+          "title": "Game developer and publisher services",
+          "detail": "We are a producer and creator of world-class quality works, operating under the supervision of YGGDRAZIL GROUP PUBLIC COMPANY LIMITED, the country's leading VFX producer, and a top-tier animation and game production company in Thailand, providing services for over 18 years. We have gained international recognition, which motivates us to continue creating high-quality works for everyone."
+        }
+      }
+    },
+    "section3": {
+      "content1": "Our highly skilled team is dedicated to providing exceptional services and consultation, delivering the best results for all of our clients. We operate under the guidance of YGGDRAZIL GROUP PUBLIC COMPANY LIMITED and Master Ad Public Company Limited (MACO), one of Thailand's leading out-of-home (OOH) advertising companies.",
+      "content2": "Experience results that always exceed expectations at MYGG."
+    }
+  },
+  "service": {
+    "title": "Customer Service",
+    "sub_title1": "Products & Payment",
+    "sub_title2": "Game"
+  },
+  "about_us": {
+    "section1": {
+      "title": "WE ARE",
+      "content": "MYGG is an international publisher formed as a joint venture <div class='block'></div> between two listed companies in Thailand, Master Ad Pcl, <div class='block'></div> Yggdrazil Group Pcl Carrying the success of the well-known series <div class='block'></div> Home Sweet Home. Our mission is to deliver the best"
+    },
+    "section2": {
+      "item1": "The top-tier Thailand visual effects(VFX), Animation, and VR Studio<br /> provide the full-service production; Ads Documentary Films, Game,<br /> Move, TV Series, and VR360 with highly skilled professionals and<br /> world class innovation with the amount of 200 million dollars Market<br /> Capitalization value. Yggdrazil has cooperated with Well-known<br /> international companies in various industries; SquareEnix - Final<br /> Fantasy XV KingGlaive, Chevrolet Toyota, Coca-Cola, Nestle, nivea,<br /> KFC Animation (Nezha), The First, Home Sweet Home and many more.",
+      "item2": "Master Ad public company limited or “MACO” is one of the<br /> leaders in the outdoor media industry with diverse media<br /> advertising of static and digital media, covering Thailand and<br /> ASEAN. Along with the smart connection platform across the<br /> ASEAN region in conjunction with the principles of good<br /> governance and social and environmental responsibility."
+    },
+    "section3": {
+      "title": "OUR AWARDS"
+    },
+    "section4": {
+      "address1": {
+        "1": "THAILAND<br />BUSINESS",
+
+        "2": "348 2nd Floor Soi Ladprao 94 (Punjamitr), Phlapphla, Wangthonglang, Bangkok, Thailand 10310",
+        "email": "Email : info@mygg-game.com",
+        "tel": "Tel : (662) 934 4364"
+      },
+      "address2": {
+        "1": "GLOBAL<br />BUSINESS",
+        "2": {
+          "name": "PIYAPON SUKSAN (ZEN)",
+          "email": "Email: globalbd@ygg-cg.com"
+        },
+        "3": {
+          "name": "JANTAKAN SIROROT (KARN)",
+          "email": "Email: producer@ygg-cg.com"
+        }
+      }
+    }
+  },
+  "contact_us": {
+    "title": "Contact Us",
+    "address1": {
+      "1": "THAILAND BUSINESS <div class='block'></div> DEPARTMENT",
+
+      "2": "348 2nd Floor Soi Ladprao 94 (Punjamitr), Phlapphla, Wangthonglang, Bangkok, Thailand 10310",
+      "email": "Email: info@mygg-game.com",
+      "tel": "Tel: (662) 934 4364",
+      "fax": "Fax: (662) 9344 560"
+    },
+    "address2": {
+      "1": "GLOBAL BUSINESS <div class='block'></div>DEPARTMENT",
+      "2": {
+        "name": "PIYAPON SUKSAN (ZEN)",
+        "email": "Email: globalbd@ygg-cg.com"
+      },
+      "3": {
+        "name": "JANTAKAN SIROROT (KARN)",
+        "email": "Email: producer@ygg-cg.com"
+      }
+    }
+  },
+  "career": {
+    "title": "Career"
+  },
+  "sign_up": {
+    "title": "Registration",
+    "term_of_service": "Terms of Service",
+    "privacy_policy": "Privacy Policy",
+    "validation": {
+      "required": "This field is required",
+      "password_min_max": "The password must be between 8-16 characters, consisting of a mixture of English alphabets, numbers or symbols.",
+      "password_confirm": "Password and Confirm Password do not match.",
+      "email_invalid": "The email is invalid",
+      "login_invalid": "Invalid username or password.",
+      "username_min": "Invalid username: Username must be at least 3 characters long and should not contain special characters or spaces.",
+      "digits_only": "Phone number should be numeric digits only."
+    }
+  },
+  "sign_in": {
+    "title": "Sign In",
+    "forgot_password": "Forgot your password?",
+    "register": "Registration",
+    "social_login": "OR SIGN IN WITH YOUR SOCIAL MEDIA ACCOUNT"
+  }
+}

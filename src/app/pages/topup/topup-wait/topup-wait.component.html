@@ -1,0 +1,21 @@
+<section id="topup-wait" class="min-h-max py-24 bg-no-repeat">
+  <div class="welcome w-full mx-auto max-w-[1320px]">
+    <app-welcome maxWidthValue="100%"></app-welcome>
+  </div>
+  <div class="inner flex-center relative w-full mx-auto max-w-[1320px] mt-6">
+    <div class="content wait text-center">
+      <div class="msg msg1">Invoice No : XXXXXXXXXXXXXXXXXX</div>
+      <div class="msg msg2 mt-3">
+        Please open BBL application to make a payment.
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <mygg-back-button class="absolute bottom-0 left-0"></mygg-back-button>
+      <barcode-button
+        class="absolute bottom-[2%] right-[3%] cursor-pointer"
+        textValue="PAY"
+        paddingValue="0 40px"
+      ></barcode-button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,56 @@
+{
+  "sign_up": {
+    "title": "REGISTRATION",
+    "username": "Username",
+    "email": {
+      "title": "Email",
+      "note": "You can use this email address to retrieve your password."
+    },
+    "password": "Password",
+    "password2": "Re-enter password",
+    "firstname": "First name",
+    "lastname": "Surname",
+    "date_of_birth": "Date of birth",
+    "country": "Country",
+    "country_code": "Code",
+    "phone_number": "Phone number",
+    "gender": {
+      "title": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "optional": "Rather not to say"
+    },
+
+    "text": "Already have an account yet.",
+    "register": "Register",
+    "sign_in": "Sign in",
+    "policy": {
+      "text1": " I agree to the ",
+      "text2": " and ",
+      "term_of_service": "Terms of Service",
+      "privacy_policy": "Privacy Policy"
+    },
+    "error": {
+      "required": "The field is required.",
+      "username": {
+        "pattern": "Invalid username: Username must be at least 3 characters long and should not contain special characters or spaces.",
+        "min": "Invalid username: Username must be at least 3 characters long and should not contain special characters or spaces.",
+        "max": "Username is too long (maximum is 60 characters)."
+      },
+      "password": {
+        "pattern": "The password must be between 8-16 characters, consisting of a mixture of English alphabets, numbers or symbols.",
+        "min": "The password must be between 8-16 characters, consisting of a mixture of English alphabets, numbers or symbols.",
+        "max": "The password must be between 8-16 characters, consisting of a mixture of English alphabets, numbers or symbols."
+      },
+      "password2": {
+        "must_match": "Password and Confirm Password do not match."
+      },
+      "email": {
+        "pattern": "Email is invalid"
+      },
+      "mobile_number": {
+        "pattern": "Phone number must be numeric digits only."
+      }
+    }
+  }
+}

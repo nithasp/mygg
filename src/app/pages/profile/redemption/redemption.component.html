@@ -1,0 +1,97 @@
+<div id="redemption">
+  <div class="inner">
+    <h1 [innerHTML]="'redeem.title' | translate">Redeem Code</h1>
+    <h2 [innerHTML]="'redeem.text1' | translate">
+      Please enter your gift card, virtual item, or promo code below.
+    </h2>
+    <form
+      class="redemption-form"
+      [formGroup]="redemptionForm"
+      (ngSubmit)="handleSubmit()"
+    >
+      <div class="form-wrapper">
+        <div class="game-name item">
+          <div class="input-wrapper">
+            <label for="game-name" [innerHTML]="'redeem.game_name' | translate"
+              >Game name</label
+            >
+            <div class="select">
+              <app-mygg-select
+                optionPlaceholder="Select"
+                [optionItems]="gameName"
+                (changeTopic)="handleTopic($event)"
+              ></app-mygg-select>
+            </div>
+          </div>
+
+          <div class="error-msg" *ngIf="game_name.invalid && game_name.touched">
+            <small
+              class="text-error"
+              *ngIf="game_name.errors?.['required']"
+              [innerHTML]="'redeem.error.required' | translate"
+              >The field is required.</small
+            >
+          </div>
+        </div>
+        <div class="game-id item">
+          <div class="input-wrapper">
+            <label for="game-id" [innerHTML]="'redeem.game_id' | translate"
+              >Game ID</label
+            >
+            <input
+              class=""
+              id="game-id"
+              type="text"
+              placeholder="Placeholder"
+              formControlName="game_id"
+            />
+          </div>
+
+          <div class="error-msg" *ngIf="game_id.invalid && game_id.touched">
+            <small
+              class="text-error"
+              *ngIf="game_id.errors?.['required']"
+              [innerHTML]="'redeem.error.required' | translate"
+              >The field is required.</small
+            >
+          </div>
+        </div>
+        <div class="redemption-code item">
+          <div class="input-wrapper">
+            <label for="redemption-code" [innerHTML]="'redeem.code' | translate"
+              >Enter redemption code</label
+            >
+            <input
+              class=""
+              id="redemption-code"
+              type="text"
+              placeholder="Placeholder"
+              formControlName="redemption_code"
+            />
+          </div>
+
+          <div
+            class="error-msg"
+            *ngIf="redemption_code.invalid && redemption_code.touched"
+          >
+            <small
+              class="text-error"
+              *ngIf="redemption_code.errors?.['required']"
+              [innerHTML]="'redeem.error.required' | translate"
+              >The field is required.</small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="redeem-button">
+        <button
+          type="submit"
+          class="btn-filled"
+          [innerHTML]="'redeem.submit' | translate"
+        >
+          Redeem
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+#submit-ticket {
+  text-align: center;
+  max-width: 854px;
+}
+h1 {
+  font-size: 32px !important;
+}
+.topic {
+  margin: 80px auto !important;
+}
+.submit-icon {
+  width: auto;
+  margin: 24px auto 35px auto;
+}
+.ticket-no {
+  margin-bottom: 8px;
+  span:nth-of-type(1) {
+    font-family: 'Myriad-Pro-SemiBold';
+  }
+}
+.button-wrapper {
+  button {
+    max-width: 272px !important;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .topic {
+    padding: 40px 0 !important;
+  }
+  .submit-icon {
+    margin: 40px auto 35px auto;
+  }
+}

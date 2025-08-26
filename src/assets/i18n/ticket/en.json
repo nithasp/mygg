@@ -1,0 +1,41 @@
+{
+  "ticket": {
+    "subject": "Subject",
+    "description": "Description",
+    "attachment": {
+      "title": "Attachment(s)-(Optional)",
+      "text1": "Drag & Drop files here or click to upload (Maximum 5 files)",
+      "text2": "Choose file"
+    },
+    "back": "Back",
+    "next": "Next",
+    "submit": "Submit",
+    "select_categories": {
+      "title": "Select Ticket Category",
+      "select_title": "Select category"
+    },
+    "recovery_my_account": {
+      "title": "Recovery my account",
+      "topic": "How did you lose access to your account ?",
+      "email": "email"
+    },
+    "in_game_question": {
+      "title": "In-game question",
+      "topic": "Type of inquiry"
+    },
+    "technical_issue": {
+      "title": "Technical issue: Installation or bug report",
+      "topic": "Select topic"
+    },
+    "report_player": {
+      "title": "Report player",
+      "topic": "Please select the type to report"
+    },
+    "payment": {
+      "title": "Payment"
+    },
+    "general_question": {
+      "title": "General question"
+    }
+  }
+}

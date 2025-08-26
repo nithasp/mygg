@@ -1,0 +1,20 @@
+.back-button {
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #05173d;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    z-index: -1;
+    transform: skew(22deg, 0);
+    transition: 0.3s;
+  }
+  &:hover {
+    background-color: #660000;
+    &:after {
+      background-color: #660000;
+    }
+  }
+}

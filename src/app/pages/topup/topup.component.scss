@@ -1,0 +1,265 @@
+// Topup Layout
+#topup {
+  min-height: 100vh;
+  background: url('../../../assets/images/topup/BG_MYGG 1.jpg');
+  background-size: contain;
+  background-position: bottom;
+  padding-top: 72px;
+  .inner {
+    padding-bottom: 38px;
+  }
+  .content {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .topup-banner {
+    height: 520px;
+  }
+  .welcome-wrapper {
+    margin-top: 52px;
+  }
+  .method {
+    display: grid;
+    grid-template-columns: repeat(11, 85px);
+    justify-content: space-between;
+    gap: 64.43px;
+    padding: 0 128px;
+    margin-top: 39px;
+  }
+
+  .item {
+    display: flex;
+
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .logo {
+    margin-bottom: 16px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    img {
+      width: auto;
+      height: auto;
+    }
+  }
+  .name {
+    color: #000;
+
+    font-family: 'Myriad-Pro-SemiBold';
+    font-size: 16px;
+
+    line-height: 140%;
+    max-width: 85px;
+
+    text-align: center;
+  }
+  @media (max-width: 1024px) {
+    .topup-banner {
+      height: 225.79px;
+    }
+    .method {
+      padding: 0 52px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .welcome-wrapper {
+      padding: 0 20px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .topup-banner {
+      height: 86.646px;
+    }
+    .method {
+      margin-top: 24.35px;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+// Topup Content
+.topup-content {
+  min-height: 100vh;
+  background: url('../../../assets/images/topup/BG-Dark_MYGG\ 1.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 120px 0 57px 0;
+  font-size: 16px;
+  .inner {
+    padding: 0 30px;
+  }
+
+  .purchase-method,
+  .purchase-diamond,
+  .purchase-coin {
+    max-width: 854px;
+    width: 100%;
+    margin: 0 auto;
+    h1 {
+      color: #fff;
+      font-family: 'Myriad-Pro-SemiBold';
+      font-size: 24px;
+      margin-top: 24px;
+      line-height: 140%;
+    }
+    .wrapper {
+      border-radius: 4px;
+      background: #fff;
+      padding: 23px 41px;
+    }
+    .item-wrapper {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      column-gap: 48px;
+      row-gap: 8px;
+    }
+    .visual-picker {
+      text-align: center;
+      cursor: pointer;
+    }
+    .box {
+      display: flex;
+      align-items: center;
+
+      margin-bottom: 8px;
+      height: 80px;
+      img {
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+      }
+    }
+    .name {
+      white-space: nowrap;
+    }
+  }
+
+  .purchase-diamond,
+  .purchase-coin {
+    h1 {
+      margin-top: 30px;
+    }
+    .box {
+      padding: 0px 9px 0 7px;
+      img {
+        margin: 0;
+      }
+    }
+    .diamond-value,
+    .coin-value {
+      font-family: 'Myriad-Pro-SemiBold';
+      margin-left: 7px;
+      white-space: nowrap;
+    }
+  }
+
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 854px;
+    width: 100%;
+    margin: 24px auto 0 auto;
+    .back,
+    .next {
+      display: flex;
+      align-items: center;
+      padding: 8px 16px;
+      max-width: 90px;
+      width: 100%;
+      height: 38px;
+      cursor: pointer;
+    }
+    .back {
+      border-radius: 4px;
+      border: 1px solid #fff;
+      background: #051640;
+      color: #ffffff;
+      svg {
+        margin-right: 10px;
+      }
+    }
+    .next {
+      border-radius: 4px;
+      background: #fff;
+      color: #051640;
+      svg {
+        margin-left: 8px;
+      }
+    }
+    .next:disabled {
+      path {
+        fill: #939498;
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .purchase-method,
+    .purchase-diamond,
+    .purchase-coin {
+      .wrapper {
+        padding: 23px 21px;
+      }
+      .item-wrapper {
+        gap: 32px;
+      }
+    }
+
+    .purchase-method,
+    .purchase-diamond,
+    .purchase-coin {
+      .box {
+        padding: 0 10px;
+      }
+    }
+  }
+
+  @media (max-width: 850px) {
+    .purchase-method,
+    .purchase-diamond,
+    .purchase-coin {
+      .item-wrapper {
+        gap: 15px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .purchase-method,
+    .purchase-diamond,
+    .purchase-coin {
+      .item-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .box {
+        justify-content: center;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    #game-method {
+      .inner {
+        padding: 0 20px;
+      }
+    }
+
+    .purchase-method,
+    .purchase-diamond,
+    .purchase-coin {
+      .wrapper {
+        padding: 20px 14px;
+      }
+      .item-wrapper {
+        gap: 12px;
+      }
+    }
+  }
+}

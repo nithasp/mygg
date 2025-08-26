@@ -1,0 +1,30 @@
+.barcode-button {
+  display: flex;
+  .text {
+    background-color: #05173d;
+    font-size: 47px;
+    font-family: 'Myriad-Pro-Bold';
+    letter-spacing: 4.7px;
+
+    color: #fff;
+  }
+
+  .bar {
+    width: 10px;
+    height: 100%;
+    background-color: #05173d;
+    margin-left: 5px;
+  }
+}
+
+.disabled {
+ 
+  .text {
+    background-color: gray;
+    
+  }
+  .bar {
+    background-color: gray;
+   
+  }
+}

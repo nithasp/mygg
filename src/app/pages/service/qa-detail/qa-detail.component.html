@@ -1,0 +1,78 @@
+<section
+  id="qa-detail"
+  class="main-page relative bg-[url('/assets/images/service/qa/qa-bg.jpg')] bg-cover bg-left"
+>
+  <div class="bg-overlay absolute top-0 left-0 w-full h-auto 2xl:h-auto">
+    <img
+      src="../../../../assets/images/service/qa/qa-header.png"
+      class="h-full 2xl:h-auto"
+      alt="qa-detail-header"
+    />
+  </div>
+
+  <div class="inner px-10 pt-64 mx-auto max-w-[1460px] relative z-10">
+    <div
+      class="qa-detail-title shadow-[0px_10px_30px_3px_black] bg-white rounded-md px-8 py-8 md:px-16"
+    >
+      <div class="wrapper block md:flex md:items-center md:justify-center">
+        <div class="qa-icon">
+          <img
+            src="../../../../assets/images/service/qa/UI_Q.png"
+            alt="qa-icon"
+            class="w-auto h-[30px] ml-auto mr-auto xs:w-[40px] xs:h-[40px] md:mr-3"
+          />
+        </div>
+
+        <div class="qa-content text-3xl break-words">
+          {{ qa.title }}
+        </div>
+      </div>
+    </div>
+
+    <div class="relative mx-auto mt-11">
+      <div
+        class="qa-detail-wrapper min-h-[100vh] bg-white rounded-md shadow-[0px_10px_10px_5px_#605d5e] px-8 pt-16 pb-6 md:px-16"
+      ></div>
+      <mygg-back-button
+        class="absolute bottom-0"
+        routerLink="../"
+      ></mygg-back-button>
+    </div>
+
+    <div class="problem-wrapper max-w-[1200px] mx-auto py-12">
+      <div
+        class="problem-title text-center text-4xl font-['Myriad-Pro-Bold'] text-[#05173d] light-intense-white tracking-widest mb-3 xs:text-5xl"
+      >
+        COMMON PROBLEMS
+      </div>
+      <div
+        class="container mx-auto w-full grid grid-cols-1 gap-y-20 text-center gap-x-5 sm:grid-cols-2 xl:grid-cols-4 xl:gap-x-32 2xl:px-10"
+      >
+        <div
+          class="problems flex flex-col items-center"
+          *ngFor="let problem of problems"
+        >
+          <div class="image-wrapper w-[260px] h-auto grow my-5">
+            <div class="w-[150px] h-[172px] mx-auto">
+              <img
+                src="{{ problem.image }}"
+                alt="{{ problem.service_name }}"
+                *ngIf="problem.image"
+              />
+              <img
+                src="../../../assets/images/topup/Mock_Game2.png"
+                alt="problem.service_name"
+                *ngIf="!problem.image"
+              />
+            </div>
+          </div>
+          <p
+            class="problem-name text-2xl light-intense-white font-bold whitespace-nowrap"
+          >
+            {{ problem.problem_name }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

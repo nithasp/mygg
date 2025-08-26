@@ -1,0 +1,101 @@
+<div id="in-game-question" class="topic">
+  <div class="sub-inner">
+    <div class="wrapper">
+      <div class="title">
+        <img
+          src="../../../../assets/images/ticket/UI_Create_mobile 1.png"
+          alt="ticket-icon"
+        />
+        <h1 [innerHTML]="'ticket.in_game_question.title' | translate">
+          In-game question
+        </h1>
+      </div>
+      <form [formGroup]="inGameQuestionForm" (ngSubmit)="handleSubmit()">
+        <div class="form-wrapper">
+          <div class="subject item">
+            <div class="input-wrapper">
+              <label
+                for="subject"
+                [innerHTML]="'ticket.subject' | translate"
+                >Subject</label
+              >
+              <input
+                class=""
+                id="subject"
+                type="text"
+                placeholder="Placeholder"
+                formControlName="subject"
+              />
+            </div>
+          </div>
+          <div class="type-of-inquiry item">
+            <div class="input-wrapper">
+              <label
+                for="topic"
+                [innerHTML]="'ticket.in_game_question.topic' | translate"
+                >Type of inquiry</label
+              >
+              <div class="select">
+                <app-mygg-select
+                  optionPlaceholder="Select"
+                  [optionItems]="banTopics"
+                  (changeTopic)="handleTopic($event)"
+                ></app-mygg-select>
+              </div>
+              <input
+                type="text"
+                class="hidden"
+                formControlName="type_of_inquiry"
+              />
+            </div>
+          </div>
+          <div class="description item">
+            <div class="input-wrapper">
+              <label
+                for="description"
+                [innerHTML]="'ticket.description' | translate"
+                >Description</label
+              >
+              <textarea
+                class=""
+                id="description"
+                type="text"
+                placeholder="Placeholder"
+                formControlName="description"
+              ></textarea>
+            </div>
+          </div>
+          <div class="attachment item">
+            <div class="input-wrapper">
+              <label
+                for="attachment"
+                [innerHTML]="'ticket.attachment.title' | translate"
+                >Attachment(s)-(Optional)</label
+              >
+              <app-mygg-dropzone></app-mygg-dropzone>
+            </div>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button
+            type="button"
+            class="btn-border"
+            routerLink="../"
+            [innerHTML]="'ticket.back' | translate"
+          >
+            Back
+          </button>
+          <button
+            type="submit"
+            class="btn-filled"
+            routerLink="../"
+            [innerHTML]="'ticket.submit' | translate"
+            [disabled]="inGameQuestionForm.status === 'INVALID'"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

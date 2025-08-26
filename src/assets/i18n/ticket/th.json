@@ -1,0 +1,41 @@
+{
+  "ticket": {
+    "subject": "หัวเรื่อง",
+    "description": "คำอธิบาย",
+    "attachment": {
+      "title": "ไฟล์แนบ (Optional)",
+      "text1": "ลากและวางไฟล์ที่นี่หรือ คลิกเพื่ออัปโหลด",
+      "text2": "เลือกไฟล์"
+    },
+    "back": "กลับ",
+    "next": "ถัดไป",
+    "submit": "ส่ง",
+    "select_categories": {
+      "title": "เลือกหัวข้อ Ticket",
+      "select_title": "เลือกหัวข้อ"
+    },
+    "recovery_my_account": {
+      "title": "กู้คืนบัญชีของฉัน",
+      "topic": "เพราะอะไรคุณถึงไม่สามารถเข้าถึงบัญชีได้?",
+      "email": "อีเมลล์"
+    },
+    "in_game_question": {
+      "title": "คำถามเกี่ยวกับเกม",
+      "topic": "เลือกหัวข้อ"
+    },
+    "technical_issue": {
+      "title": "ปัญหาทางเทคนิค: การติดตั้ง",
+      "topic": "เลือกหัวข้อ"
+    },
+    "report_player": {
+      "title": "รายงานผู้เล่น",
+      "topic": "เลือกหัวข้อ"
+    },
+    "payment": {
+      "title": "การชำระเงิน"
+    },
+    "general_question": {
+      "title": "การชำระเงิน"
+    }
+  }
+}

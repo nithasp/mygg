@@ -1,0 +1,192 @@
+<div id="topbar">
+  <!-- Desktop -->
+  <div class="topbar-container desktop">
+    <div class="topbar-item1">
+      <div class="logo" routerLink="/">
+        <img
+          src="../../../assets/images/topbar/company-logo.png"
+          alt="company-logo"
+        />
+      </div>
+      <div class="menubar-wrapper">
+        <div class="item" current-path="">
+          <a routerLink="/" [innerHTML]="'topbar.home' | translate">
+            Our services
+          </a>
+        </div>
+        <!-- <div class="item" current-path="/topup">
+          <a routerLink="/topup" [innerHTML]="'topbar.topup' | translate"> Top Up </a>
+        </div> -->
+        <div class="item" current-path="/service">
+          <a routerLink="/service" [innerHTML]="'topbar.support' | translate">
+            Support
+          </a>
+        </div>
+        <div class="item" current-path="/contact">
+          <a routerLink="/contact" [innerHTML]="'topbar.contact' | translate">
+            Contact Us
+          </a>
+        </div>
+        <div class="item" current-path="/about-us">
+          <a routerLink="/about-us" [innerHTML]="'topbar.about_us' | translate"
+            >Who we are
+          </a>
+        </div>
+        <!-- <div class="item" current-path="/career">
+          <a routerLink="/career" [innerHTML]="'topbar.career' | translate"> Career </a>
+        </div> -->
+        <!-- <div class="item" current-path="/">
+          <a routerLink="/" [innerHTML]="'topbar.redeem' | translate"> Redemption</a>
+        </div> -->
+      </div>
+    </div>
+    <div class="topbar-item2">
+      <div class="auth">
+        <div
+          class="login"
+          routerLink="/sign-in"
+          *ngIf="!isLogin"
+          [innerHTML]="'topbar.sign_in' | translate"
+        >
+          Log in
+        </div>
+        <div class="username" routerLink="/profile" *ngIf="isLogin">
+          <img
+            src="../../../assets/images/topbar/profile-icon.png"
+            alt="profile-icon"
+            class="profile-icon"
+          />
+          <span>{{ userInfo?.username || 'Username' }}</span>
+        </div>
+      </div>
+      <div class="lang">
+        <div
+          class="en btn"
+          (click)="changeLanguage('en', 'desktop')"
+          [ngClass]="language === 'en' ? 'active' : ''"
+        >
+          EN
+        </div>
+        <div class="line"></div>
+        <div
+          class="th btn"
+          (click)="changeLanguage('th', 'desktop')"
+          [ngClass]="language === 'th' ? 'active' : ''"
+        >
+          TH
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Responsive -->
+  <div class="topbar-container responsive">
+    <div class="topbar-item1">
+      <div
+        class="hamburger-menu"
+        [ngClass]="isHamburgerMenuActive === true ? 'active' : ''"
+        (click)="isHamburgerMenuActive = !isHamburgerMenuActive"
+      >
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+      <div class="company-logo" routerLink="/">
+        <img
+          src="../../../assets/images/topbar/company-logo.png"
+          alt="company-logo"
+        />
+      </div>
+    </div>
+    <div class="topbar-item2">
+      <div class="profile-icon" routerLink="/profile">
+        <img
+          src="../../../assets/images/topbar/profile-icon.png"
+          alt="profile-icon"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- Responsive Menu -->
+  <div
+    class="responsive-menu"
+    [ngClass]="isHamburgerMenuActive === true ? 'active' : ''"
+  >
+    <div class="wrapper">
+      <div class="pages">
+        <div
+          class="item"
+          (click)="changePage('')"
+          current-path=""
+          [innerHTML]="'topbar.home' | translate"
+        >
+          Our services
+        </div>
+        <!-- <div class="item" (click)="changePage('topup')" current-path="/topup" [innerHTML]="'topbar.topup' | translate">
+          Top Up
+        </div> -->
+        <div
+          class="item"
+          (click)="changePage('support')"
+          current-path="/support"
+          [innerHTML]="'topbar.support' | translate"
+        >
+          Support
+        </div>
+        <div
+          class="item"
+          (click)="changePage('contact')"
+          current-path="/contact"
+          [innerHTML]="'topbar.contact' | translate"
+        >
+          Contact Us
+        </div>
+        <div
+          class="item"
+          (click)="changePage('about-us')"
+          current-path="/about-us"
+          [innerHTML]="'topbar.about_us' | translate"
+        >
+          Who we are
+        </div>
+        <!-- <div class="item" (click)="changePage('career')" current-path="/career" [innerHTML]="'topbar.career' | translate">
+          Career
+        </div> -->
+        <!-- <div class="item" (click)="changePage('')" current-path="/" [innerHTML]="'topbar.redeem' | translate">
+          Redemption
+        </div> -->
+        <div
+          class="item sign-out"
+          (click)="signOut()"
+          [innerHTML]="'topbar.sign_out' | translate"
+        >
+          Sign Out
+        </div>
+      </div>
+      <div class="lang">
+        <div
+          class="en btn"
+          (click)="changeLanguage('en', 'responsive')"
+          [ngClass]="language === 'en' ? 'active' : ''"
+        >
+          EN
+        </div>
+        <div class="line"></div>
+        <div
+          class="th btn"
+          (click)="changeLanguage('th', 'responsive')"
+          [ngClass]="language === 'th' ? 'active' : ''"
+        >
+          TH
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="overlay"
+    [ngClass]="isHamburgerMenuActive === true ? 'active' : ''"
+    #overlay
+  ></div>
+</div>

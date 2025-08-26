@@ -1,0 +1,50 @@
+#page-not-found {
+  background: url('../../../assets/images/page-not-found/page-not-found-bg.jpg')
+    no-repeat;
+  background-position: initial;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 232px 0 53px 0;
+}
+.inner {
+  padding: 0 30px;
+}
+.wrapper {
+  max-width: 856px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 8px;
+  background: #fff;
+  padding: 59px 84px 79px 84px;
+  text-align: center;
+}
+h1 {
+  color: #051640;
+
+  font-family: 'Myriad-Pro-SemiBold';
+  font-size: 40px;
+}
+p {
+  margin-bottom: 24px;
+  font-size: 16px;
+}
+.btn-filled {
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+@media (max-width: 576px) {
+  .inner {
+    padding: 0 20px;
+  }
+  .wrapper {
+    padding: 55px 16px 40px 16px;
+  }
+}
+
+
+@media (max-height: 800px) {
+  #page-not-found {
+    padding: 174px 0 53px 0;
+  }
+}

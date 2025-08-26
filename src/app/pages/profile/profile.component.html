@@ -1,0 +1,155 @@
+<section id="profile">
+  <div class="inner">
+    <app-welcome></app-welcome>
+    <div class="responsive-menu">
+      <div class="mygg-select container" #responsiveMenu>
+        <div class="select-box" [ngClass]="isOptionDirty ? 'dirty' : ''">
+          <div
+            class="options-container"
+            [ngClass]="isOptionsContainerActive === true ? 'active' : ''"
+          >
+            <div class="wrapper">
+              <div
+                class="option"
+                *ngFor="let item of optionItems"
+                [ngClass]="item.name === optionValue ? 'active' : ''"
+                (click)="handleSelect(item)"
+              >
+                <input
+                  type="radio"
+                  class="radio"
+                  id="{{ item.id }}"
+                  name="{{ item.name }}"
+                />
+                <img
+                  src="{{ item.icon }}"
+                  alt="{{ item.name }} icon"
+                  class="page-icon"
+                />
+                <label for="{{ item.name }}">{{
+                  language === 'en' ? item?.name : item?.name_th
+                }}</label>
+                <div class="active-icon">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="17"
+                    viewBox="0 0 16 17"
+                    fill="none"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M13.3657 4.73431C13.6781 5.04673 13.6781 5.55327 13.3657 5.86569L6.96571 12.2657C6.65329 12.5781 6.14676 12.5781 5.83434 12.2657L2.63434 9.06569C2.32192 8.75327 2.32192 8.24673 2.63434 7.93431C2.94676 7.6219 3.45329 7.6219 3.76571 7.93431L6.40002 10.5686L12.2343 4.73431C12.5468 4.4219 13.0533 4.4219 13.3657 4.73431Z"
+                      fill="#06246C"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="selected"
+            (click)="isOptionsContainerActive = !isOptionsContainerActive"
+          >
+            <img
+              src="{{ currentItem?.icon }}"
+              alt="{{ currentItem?.name }} icon"
+              class="page-icon"
+            />
+            <span>{{
+              language === 'en'
+                ? currentItem?.name
+                : currentItem?.name_th || "Select Topics"
+            }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="profile-content">
+      <div class="sidebar desktop-menu">
+        <div class="wrapper">
+          <div class="pages">
+            <div routerLink="/profile/edit" class="sidebar-link">
+              <img
+                src="../../../assets/images/profile/Group.png"
+                alt="profile-icon"
+              />
+              <span [innerHTML]="'profile.sidebar.profile' | translate"
+                >Profile</span
+              >
+            </div>
+            <div routerLink="/profile/inbox" class="sidebar-link">
+              <img
+                src="../../../assets/images/profile/Group (1).png"
+                alt="inbox-icon"
+              />
+              <span [innerHTML]="'profile.sidebar.inbox' | translate"
+                >Inbox</span
+              >
+            </div>
+            <div routerLink="/topup" class="sidebar-link">
+              <img
+                src="../../../assets/images/profile/Group 111.png"
+                alt="topup-icon"
+              />
+              <span [innerHTML]="'profile.sidebar.topup' | translate"
+                >Top up</span
+              >
+            </div>
+            <div routerLink="/profile/redemption" class="sidebar-link active">
+              <img
+                src="../../../assets/images/profile/Group (2).png"
+                alt="redemption-icon"
+              />
+              <span [innerHTML]="'profile.sidebar.redemption' | translate"
+                >Redemption</span
+              >
+            </div>
+            <div routerLink="/profile/purchase-history" class="sidebar-link">
+              <img
+                src="../../../assets/images/profile/Group (3).png"
+                alt="purchase-history-icon"
+              />
+              <span [innerHTML]="'profile.sidebar.purchase_history' | translate"
+                >Purchase History</span
+              >
+            </div>
+            <div routerLink="/support" class="sidebar-link">
+              <img
+                src="../../../assets/images/profile/Group 932.png"
+                alt="support-icon"
+              />
+              <span [innerHTML]="'profile.sidebar.support' | translate"
+                >Support</span
+              >
+            </div>
+            <div routerLink="/profile/ticket-categories" class="sidebar-link">
+              <img
+                src="../../../assets/images/profile/Group (4).png"
+                alt="ticket-categories-icon"
+              />
+              <span [innerHTML]="'profile.sidebar.ticket_history' | translate"
+                >Ticket Categories</span
+              >
+            </div>
+          </div>
+          <div class="line"></div>
+          <div class="signout-btn sidebar-link" (click)="signOut()">
+            <img
+              src="../../../assets/images/profile/Group 1172.png"
+              alt="signout-icon"
+            />
+            <span [innerHTML]="'profile.sidebar.sign_out' | translate"
+              >Sign out</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,153 @@
+.mygg-select {
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  font-size: 16px;
+  color: #939498;
+}
+
+.select-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.select-box .options-container {
+  position: absolute;
+  top: 125%;
+  left: 0%;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  border-top: none;
+  background-color: #f5f5f5;
+  max-height: 0;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4px 0 8px 0;
+  transition: all 0.4s;
+  overflow: hidden;
+  order: 1;
+
+  opacity: 0;
+  visibility: hidden;
+}
+
+.select-box.dirty .selected {
+  color: #000;
+}
+
+.selected {
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #515151;
+  background-color: #fff;
+  width: 100%;
+  max-height: 40px;
+  padding: 9px 12px;
+  cursor: pointer;
+}
+
+.selected::after {
+  content: '';
+  background: url('/assets/images/sign-up/down-arrow.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  width: 8px;
+  height: 4.8px;
+  position: absolute;
+  top: 50%;
+  right: 14.6px;
+  transform: translateY(-50%);
+  transition: all 0.4s;
+}
+
+.select-box .options-container.active {
+  max-height: 160px;
+  opacity: 1;
+  visibility: visible;
+  overflow-y: scroll;
+}
+
+.select-box .options-container.active + .selected::after {
+  transform: rotateX(180deg);
+}
+
+.select-box .option {
+  position: relative;
+  color: #404040;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.1s;
+  background-color: white;
+  margin-top: 3px;
+}
+.select-box .option.active {
+  background-color: #dee1e8;
+}
+.select-box .option .active-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.select-box .option.active .active-icon {
+  display: block;
+}
+
+.select-box .option:first-child {
+  margin-top: 0;
+}
+
+.select-box .option:hover {
+  background-color: #dee1e8;
+}
+
+.select-box .option:hover label {
+  color: #06246c;
+}
+
+.select-box label {
+  font-size: 16px;
+  color: #404040;
+  cursor: pointer;
+}
+
+.select-box .option .radio {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+//////////// Scrollbar Customize //////////////
+
+// .select-box .options-container::-webkit-scrollbar {
+//   width: 15px;
+//   background: white;
+//   border-radius: 10px 8px 28px 10px;
+// }
+
+// .select-box .options-container::-webkit-scrollbar-thumb {
+//   background: #051640;
+//   border-radius: 10px 8px 8px 10px;
+// }
+
+@media (max-width: 768px) {
+  .selected {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .selected {
+    max-height: initial;
+  }
+}

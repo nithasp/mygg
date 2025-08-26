@@ -1,0 +1,15 @@
+#method {
+  background: url(../../../../assets/images/method/method-bg.jpg) no-repeat;
+  background-size: cover;
+}
+.mygg-coins {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 2rem;
+}
+.coin {
+  padding: 5px 0px 43px 0px;
+  border-radius: 10px;
+  background-color: #112349;
+}

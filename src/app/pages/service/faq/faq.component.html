@@ -1,0 +1,54 @@
+<section id="faq" class="service-content">
+  <accordion [isAnimated]="true" [closeOthers]="true">
+    <accordion-group [heading]="'service.faq.item1.title' | translate">
+      <div [innerHTML]="'service.faq.item1.content' | translate">
+        <p>Game Misconduct Penalty</p>
+        <p>MYGG team hereby announces the penalty rules for game misconduct:</p>
+        <ol>
+          <li>
+            If the team finds that a player is using cheating programs,
+            including unauthorized modifications or alterations to game files,
+            or engaging in behaviors that exploit game vulnerabilities,
+            appropriate penalties will be imposed, including temporary
+            suspension for xx days or permanent ID suspension.
+          </li>
+          <li>
+            Attempts to exploit game system bugs or errors for unauthorized
+            benefits will result in penalties determined by the team, with the
+            maximum penalty being permanent ID suspension.
+          </li>
+          <li>
+            Supporting or promoting cheat programs in any case will result in
+            permanent ID suspension.
+          </li>
+          <li>
+            For inquiries regarding account suspension, the MYGG team reserves
+            the right not to disclose any evidence publicly. Players can only
+            contact the team through the problem report link.
+          </li>
+          <li>
+            The MYGG team will consider and provide the details of the evidence
+            as appropriate.
+          </li>
+        </ol>
+        <p>Note:</p>
+        <p>
+          - The team cannot be held responsible in any case if players are
+          deceived by Real Money Transactions, as it is the player's own choice
+          to take the risk.
+        </p>
+        <p>
+          - Accounts that have been penalized for verified violations will not
+          have their penalties reduced or lifted under any circumstances.
+        </p>
+      </div>
+    </accordion-group>
+    <accordion-group [heading]="'service.faq.item2.title' | translate">
+      <p [innerHTML]="'service.faq.item2.content' | translate">
+        Submit details of bugs and encountered issues along with screenshot
+        images or videos to the MYGG team via email:
+        <a href="mailto:support@mygg-game.com">support@mygg-game.com</a>
+      </p>
+    </accordion-group>
+  </accordion>
+</section>

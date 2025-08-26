@@ -1,0 +1,492 @@
+<section id="sign-up">
+  <div class="sign-up-container">
+    <div class="content">
+      <h1 class="title" [innerHTML]="'sign_up.title' | translate">
+        REGISTRATION
+      </h1>
+      <form class="sign-up-form" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+        <div class="form-wrapper">
+          <div class="username item">
+            <div class="input-wrapper">
+              <label for="username" [innerHTML]="'sign_up.username' | translate"
+                >Username</label
+              >
+              <input
+                class=""
+                id="username"
+                type="text"
+                placeholder="Placeholder"
+                formControlName="username"
+              />
+            </div>
+
+            <div class="error-msg" *ngIf="username.invalid && username.touched">
+              <small
+                class="text-error"
+                *ngIf="username.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+              <small
+                class="text-error long"
+                *ngIf="username.errors?.['pattern']"
+                [innerHTML]="'sign_up.error.username.pattern' | translate"
+                >Invalid username: Username must be at least 3 characters long
+                and should not contain special characters or spaces.</small
+              >
+              <small
+                class="text-error long"
+                *ngIf="username.errors?.['minlength']"
+                [innerHTML]="'sign_up.error.username.min' | translate"
+                >Invalid username: Username must be at least 3 characters long
+                and should not contain special characters or spaces.</small
+              >
+              <small
+                class="text-error long"
+                *ngIf="username.errors?.['maxlength']"
+                [innerHTML]="'sign_up.error.username.max' | translate"
+                >Username is too long (maximum is 60 characters).</small
+              >
+            </div>
+          </div>
+          <div class="email item">
+            <div class="input-wrapper">
+              <label for="email" [innerHTML]="'sign_up.email.title' | translate"
+                >Email</label
+              >
+              <input
+                class=""
+                id="email"
+                type="text"
+                placeholder="Placeholder"
+                formControlName="email"
+              />
+            </div>
+
+            <p
+              class="note"
+              *ngIf="!email.touched"
+              [innerHTML]="'sign_up.email.note' | translate"
+            >
+              You can use this email address to retrieve your password.
+            </p>
+            <div class="error-msg" *ngIf="email.invalid && email.touched">
+              <small
+                class="text-error"
+                *ngIf="email.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+              <small
+                class="text-error"
+                *ngIf="email.errors?.['pattern']"
+                [innerHTML]="'sign_up.error.email.pattern' | translate"
+                >Email is invalid</small
+              >
+            </div>
+          </div>
+          <div class="password item">
+            <div class="input-wrapper">
+              <label for="password" [innerHTML]="'sign_up.password' | translate"
+                >Password</label
+              >
+              <input
+                class=""
+                id="password"
+                type="password"
+                placeholder="Placeholder"
+                formControlName="password1"
+              />
+            </div>
+
+            <div
+              class="error-msg"
+              *ngIf="password1.invalid && password1.touched"
+            >
+              <small
+                class="text-error"
+                *ngIf="password1.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+              <small
+                class="text-error long"
+                *ngIf="password1.errors?.['pattern'] || password1.errors?.['minlength'] || password1.errors?.['maxlength']"
+                [innerHTML]="'sign_up.error.password.pattern' | translate"
+                >The password must be between 8-16 characters, consisting of a
+                mixture of English alphabets, numbers or symbols.</small
+              >
+            </div>
+          </div>
+          <div class="confirm-password item">
+            <div class="input-wrapper">
+              <label
+                for="password2"
+                [innerHTML]="'sign_up.password2' | translate"
+                >Re-enter password</label
+              >
+              <input
+                class=""
+                id="password2"
+                type="password"
+                placeholder="Placeholder"
+                formControlName="password2"
+              />
+            </div>
+
+            <div
+              class="error-msg"
+              *ngIf="password2.invalid && password2.touched"
+            >
+              <small
+                class="text-error"
+                *ngIf="password2.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+              <small
+                class="text-error"
+                *ngIf="password2.errors?.['MustMatch']"
+                [innerHTML]="'sign_up.error.password2.must_match' | translate"
+                >Password and Confirm Password do not match.</small
+              >
+            </div>
+          </div>
+
+          <div class="firstname item">
+            <div class="input-wrapper">
+              <label
+                for="firstname"
+                [innerHTML]="'sign_up.firstname' | translate"
+                >First name</label
+              >
+              <input
+                class=""
+                id="firstname"
+                type="text"
+                placeholder="Placeholder"
+                formControlName="firstname"
+              />
+            </div>
+
+            <div
+              class="error-msg"
+              *ngIf="firstname.invalid && firstname.touched"
+            >
+              <small
+                class="text-error"
+                *ngIf="firstname.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+            </div>
+          </div>
+
+          <div class="lastname item">
+            <div class="input-wrapper">
+              <label for="lastname" [innerHTML]="'sign_up.lastname' | translate"
+                >Surname</label
+              >
+              <input
+                class=""
+                id="lastname"
+                type="text"
+                placeholder="Placeholder"
+                formControlName="lastname"
+              />
+            </div>
+
+            <div class="error-msg" *ngIf="lastname.invalid && lastname.touched">
+              <small
+                class="text-error"
+                *ngIf="lastname.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+            </div>
+          </div>
+
+          <div class="date item">
+            <div class="input-wrapper">
+              <label
+                for="lastname"
+                [innerHTML]="'sign_up.date_of_birth' | translate"
+                >Date of birth</label
+              >
+              <div class="daterangepicker-container">
+                <input
+                  type="text"
+                  placeholder="DD/MM/YYYY"
+                  class="form-control"
+                  [bsConfig]="bsConfig"
+                  bsDatepicker
+                  formControlName="date_of_birth"
+                />
+              </div>
+            </div>
+            <div
+              class="error-msg"
+              *ngIf="date_of_birth.invalid && date_of_birth.touched"
+            >
+              <small
+                class="text-error"
+                *ngIf="date_of_birth.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+            </div>
+          </div>
+
+          <div class="country item">
+            <div class="input-wrapper">
+              <label for="country" [innerHTML]="'sign_up.country' | translate"
+                >Country</label
+              >
+              <div class="select">
+                <app-mygg-select
+                  optionPlaceholder="Select"
+                  [optionItems]="countries"
+                  (changeTopic)="changeCountry($event)"
+                ></app-mygg-select>
+              </div>
+            </div>
+
+            <div class="error-msg" *ngIf="country.invalid && country.touched">
+              <small
+                class="text-error"
+                *ngIf="country.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+            </div>
+          </div>
+
+          <div class="telephone item">
+            <div class="telephone-form-wrapper">
+              <div class="country-code">
+                <div class="input-wrapper">
+                  <label
+                    for="code"
+                    [innerHTML]="'sign_up.country_code' | translate"
+                    >Code</label
+                  >
+                  <div class="select">
+                    <app-mygg-select
+                      optionPlaceholder="Select"
+                      [optionItems]="countriesCode"
+                      (changeTopic)="changeCountryCode($event)"
+                    ></app-mygg-select>
+                  </div>
+                </div>
+
+                <div
+                  class="error-msg"
+                  *ngIf="mobile_country.invalid && mobile_country.touched"
+                >
+                  <small
+                    class="text-error"
+                    *ngIf="mobile_country.errors?.['required']"
+                    [innerHTML]="'sign_up.error.required' | translate"
+                    >The field is required.</small
+                  >
+                </div>
+              </div>
+
+              <div class="mobile-number">
+                <div class="input-wrapper">
+                  <label
+                    for="mobile-number"
+                    [innerHTML]="'sign_up.phone_number' | translate"
+                    >Phone number</label
+                  >
+                  <input
+                    class=""
+                    id="mobile-number"
+                    type="text"
+                    placeholder="Placeholder"
+                    formControlName="mobile_number"
+                  />
+                </div>
+
+                <div
+                  class="error-msg"
+                  *ngIf="mobile_number.invalid && mobile_number.touched"
+                >
+                  <small
+                    class="text-error"
+                    *ngIf="mobile_number.errors?.['required']"
+                    [innerHTML]="'sign_up.error.required' | translate"
+                    >The field is required.</small
+                  >
+                  <small
+                    class="text-error"
+                    *ngIf="mobile_number.errors?.['pattern']"
+                    >Phone number should be numeric digits only.</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gender item">
+            <div class="input-wrapper">
+              <label
+                for="lastname"
+                [innerHTML]="'sign_up.gender.title' | translate"
+                >Gender</label
+              >
+              <div class="gender-wrapper">
+                <div class="female gender-item">
+                  <input
+                    type="radio"
+                    class="cursor-pointer"
+                    [value]="1"
+                    formControlName="gender"
+                  />
+                  <label
+                    for=""
+                    class=""
+                    [innerHTML]="'sign_up.gender.female' | translate"
+                    >Female</label
+                  >
+                </div>
+                <div class="male gender-item">
+                  <input
+                    type="radio"
+                    [value]="0"
+                    formControlName="gender"
+                    class="cursor-pointer"
+                  />
+                  <label
+                    for=""
+                    class=""
+                    [innerHTML]="'sign_up.gender.male' | translate"
+                    >Male</label
+                  >
+                </div>
+                <div class="no-gender gender-item">
+                  <input
+                    type="radio"
+                    [value]="2"
+                    formControlName="gender"
+                    class="cursor-pointer"
+                  />
+                  <label
+                    for=""
+                    class=""
+                    [innerHTML]="'sign_up.gender.optional' | translate"
+                    >Rather not to say</label
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="error-msg" *ngIf="gender.invalid && gender.touched">
+              <small
+                class="text-error"
+                *ngIf="gender.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+            </div>
+          </div>
+        </div>
+        <!-- <div class="social-login">
+          <div class="text">Or Sign in with</div>
+          <div class="icon-wrapper">
+            <div class="mygg social-icon">
+              <img
+                src="../../../assets/images/sign-up/UI_Mygg.png"
+                alt="mygg-icon"
+              />
+            </div>
+            <div class="facebook social-icon">
+              <img
+                src="../../../assets/images/sign-up/UI_fb.png"
+                alt="mygg-icon"
+              />
+            </div>
+            <div class="twitter social-icon">
+              <img
+                src="../../../assets/images/sign-up/UI_tw.png"
+                alt="mygg-icon"
+              />
+            </div>
+            <div class="google social-icon">
+              <img
+                src="../../../assets/images/sign-up/UI_GG.png"
+                alt="mygg-icon"
+              />
+            </div>
+          </div>
+        </div> -->
+        <div class="policy">
+          <div class="input-wrapper">
+            <div class="wrapper">
+              <div class="checkbox-wrapper">
+                <label class="mygg-checkbox-container">
+                  <input type="checkbox" formControlName="policy" />
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="text">
+                <span [innerHTML]="'sign_up.policy.text1' | translate"
+                  >I agree to the</span
+                >
+
+                <a
+                  class=""
+                  routerLink="/term-of-service"
+                  [innerHTML]="'sign_up.policy.term_of_service' | translate"
+                  >Terms of Service</a
+                >
+                <span [innerHTML]="'sign_up.policy.text2' | translate"
+                  >and</span
+                >
+
+                <a
+                  class=""
+                  routerLink="/privacy-policy"
+                  [innerHTML]="'sign_up.policy.privacy_policy' | translate"
+                  >Privacy Policy</a
+                >
+              </div>
+            </div>
+            <div class="error-msg" *ngIf="policy.invalid && policy.touched">
+              <small
+                class="text-error"
+                *ngIf="policy.errors?.['required']"
+                [innerHTML]="'sign_up.error.required' | translate"
+                >The field is required.</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="register-button">
+          <button
+            type="submit"
+            class="btn-filled"
+            [disabled]="isSubmitButtonDisabled"
+            [innerHTML]="'sign_up.register' | translate"
+          >
+            Register
+          </button>
+        </div>
+        <div class="line"></div>
+        <div class="sign-in">
+          <div class="text" [innerHTML]="'sign_up.text' | translate">
+            Already have an account.
+          </div>
+          <button
+            type="button"
+            class="btn-border"
+            routerLink="/sign-in"
+            [innerHTML]="'sign_up.sign_in' | translate"
+          >
+            Sign in
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

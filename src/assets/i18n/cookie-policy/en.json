@@ -1,0 +1,43 @@
+{
+  "cookie_policy": {
+    "title": "COOKIE USAGE POLICY",
+    "sub_title": "The website of MYGG Company and its affiliates (hereinafter referred to as the \"Company\") uses cookies (\"Cookies\") to track the number of website visitors and the web pages visited, as well as to analyze, improve, and develop the Company's website to provide maximum benefits to website visitors. In this regard, the Company would like to inform you about the details and functionality of cookies as follows:",
+    "1": {
+      "title": "What are cookies?",
+      "text1": "Cookies are small files that are downloaded and stored on your computer device connected to the internet, such as a computer, tablet, mobile phone, or electronic device, which do not pose any harm to your computer device. Cookies enable websites to remember your preferences and browsing history, and the data stored in cookies is used when you visit or display content on the website for temporary service provision unless you delete cookies from your computer system."
+    },
+    "2": {
+      "title": "Information collected by cookies",
+      "text1": "You agree and acknowledge that cookies on the Company's website automatically collect and store the following data and personal information:",
+      "1": "Computer traffic data (Log File), such as your IP address and the date and time of your visit to the Company's website.",
+      "2": "Details and behavior of using the Company's website, such as the web pages you visit and the last web page you visit before leaving the Company's website, including the content on the visited web pages and the duration of the visit.",
+      "3": "Your user account and password, in case you choose to have the website \"remember your password.\"",
+      "4": "The type of web browser used to access the website.",
+      "5": "The domain name of the website that linked you to the Company's website.",
+      "text2": "The Company may use your IP address or the above-mentioned collected data to identify your identity for the Company's business purposes, legal compliance, protection of the Company's legitimate interests, and the purposes specified in the Company's Privacy Policy only. You can find more details about the aforementioned policy in the \"Privacy Policy\" section of the Company's personal data management policy."
+    },
+    "3": {
+      "title": "Types of cookies used by the Company",
+      "text1": "The cookies used on the Company's website are as follows:",
+      "1": "Strictly necessary cookies: These are cookies that are necessary and essential for the proper functioning of the Company's website.",
+      "2": "Analytic/Performance cookies: These are cookies used by the Company to track statistical data, such as the number of website visitors and the web pages visited, as well as the characteristics and behavior of users accessing the Company's website. These cookies are used for analysis and processing purposes to improve and enhance the Company's website.",
+      "3": "Third-party cookies: The Company's website may contain third-party cookies sent from various websites, such as YouTube cookies from embedded videos and playlists of the Company's YouTube channel or links to external websites.",
+      "text2": "Please note that the Company is not aware of and does not assume responsibility for the operations of the aforementioned third-party cookies. Therefore, the Company kindly requests that you familiarize yourself with the privacy practices and cookie usage policies of those external third parties before providing your personal information to them."
+    },
+    "4": {
+      "title": "Deleting and/or Blocking Cookies",
+      "text1": "By visiting and using the company's website, you are considered to have agreed and consented to the use of cookies as specified in this cookie usage policy. However, if you wish to withdraw your consent for the use of such cookies, you can delete and/or block cookies in your web browser on your computer or mobile device. Instructions for deleting and/or blocking cookies can typically be found in the browser's settings. The specific steps may vary depending on the browser you are using, but popular browsers like Chrome, Firefox, Microsoft Edge, Internet Explorer, Safari for iOS, Chrome for Android, and Chrome for iOS offer options for managing cookies. Please note that limiting the use of cookies may impact your ability to access all parts of the company's website."
+    },
+    "5": {
+      "title": "Modifying the Cookie Usage Policy",
+      "text1": "The company reserves the right to modify or amend this cookie usage policy as deemed necessary. It is advisable to periodically review this policy to stay informed about any updates or changes made for your own benefit."
+    },
+    "address": {
+      "title": "Contact for Inquiries",
+      "text1": "If you have any questions regarding the use of cookies or the cookie usage policy of the company, you can contact the company at the following address:",
+      "1": "348, 2nd Floor, Soi Ladprao 94 (Panjamitr), Phlabphla, Wang Thonglang, Bangkok, 10310",
+      "2": "Phone: 02-096-9686",
+      "3": "Email: <a href=\"mailto:info@mygg-game.com\">info@mygg-game.com</a>"
+    }
+  }
+}

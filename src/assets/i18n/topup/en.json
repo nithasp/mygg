@@ -1,0 +1,16 @@
+{
+  "topup": {
+    "complete": {
+      "text1": "The payment has been completed",
+      "text2": "Payment No.",
+      "text3": "Transaction time:",
+      "button": "Back to site"
+    },
+    "failed": {
+      "text1": "Transaction failed",
+      "text2": "Please try a different payment method",
+      "try_button": "Try again",
+      "cancel_button": "Cancel"
+    }
+  }
+}

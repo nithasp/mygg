@@ -1,0 +1,38 @@
+<div id="topup-failed">
+  <div class="inner">
+    <div class="content">
+      <div class="wrapper">
+        <h1 [innerHTML]="'topup.failed.text1' | translate">
+          Transaction failed
+        </h1>
+        <div class="failed-icon">
+          <img
+            src="../../../../assets/images/topup/failed/failed-icon.png"
+            alt="failed-icon"
+          />
+        </div>
+        <h2 [innerHTML]="'topup.failed.text2' | translate">
+          Please try a different payment method
+        </h2>
+
+        <div class="button-wrapper">
+          <button
+            class="btn-filled"
+            routerLink="/"
+            [innerHTML]="'topup.failed.try_button' | translate"
+          >
+            Try again
+          </button>
+          <div class="block"></div>
+          <button
+            class="btn-border"
+            routerLink="/"
+            [innerHTML]="'topup.failed.cancel_button' | translate"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,107 @@
+<div id="inbox">
+  <div class="inner">
+    <div class="inbox-empty" *ngIf="inboxMessagesFilter.length === 0">
+      <div class="wrapper">
+        <img
+          src="../../../../assets/images/inbox/undraw_mailbox_re_dvds 1.png"
+          alt="inbox-empty"
+        />
+        <h1 [innerHTML]="'inbox_empty.title' | translate">
+          Your inbox is empty
+        </h1>
+      </div>
+    </div>
+    <div class="inbox-content" *ngIf="inboxMessagesFilter.length > 0">
+      <div class="title">
+        <h1 [innerHTML]="'inbox.title' | translate">Inbox</h1>
+        <div class="delete-btn">
+          <span *ngIf="selectedItemNumber > 0">
+            <span>{{ selectedItemNumber }}&nbsp;</span>
+            <span [innerHTML]="'inbox.selected' | translate"
+              >message(s) selected</span
+            >
+          </span>
+          <img
+            [src]="
+              selectedItemNumber > 0
+                ? '../../../../assets/images/inbox/trash-icon-active.png'
+                : '../../../../assets/images/inbox/trash-icon-disabled.png'
+            "
+            alt="trash-icon"
+            class="trash-icon"
+            [ngClass]="selectedItemNumber > 0 ? 'active' : 'disabled'"
+            (click)="deleteItem()"
+          />
+        </div>
+      </div>
+      <div class="inbox-item-wrapper">
+        <div class="inbox-item" *ngFor="let item of inboxMessagesFilter">
+          <div class="inbox-item-section1">
+            <div class="inbox-item-section1-wrapper">
+              <div class="inbox-item-title">
+                <div class="checkbox-wrapper">
+                  <label class="mygg-checkbox-container">
+                    <input
+                      type="checkbox"
+                      [checked]="item.selected"
+                      (change)="checkSelected(item)"
+                    />
+                    <span class="checkmark"></span>
+                  </label>
+                </div>
+                <div class="wrapper">
+                  <div class="title">
+                    {{ language === 'en' ? item?.en.title : item?.th.title }}
+                  </div>
+                  <div class="date">
+                    {{ language === 'en' ? item?.en.date : item?.th.date }}
+                  </div>
+                </div>
+              </div>
+              <div class="detail">
+                <a
+                  routerLink="{{
+                    language === 'en' ? item?.en.id : item?.th.id
+                  }}"
+                  [innerHTML]="'inbox.detail' | translate"
+                  >View detail ></a
+                >
+              </div>
+            </div>
+          </div>
+          <p class="inbox-item-section2">
+            {{ language === 'en' ? item?.en.content : item?.th.content }}
+          </p>
+        </div>
+      </div>
+      <div class="pagination">
+        <button
+          class="prev-btn btn-ghost"
+          (click)="pageChange(currentPage - 1)"
+          [disabled]="currentPage === 1"
+        >
+          < Previous
+        </button>
+        <div class="page-wrapper">
+          <input
+            type="number"
+            class="current-page"
+            min="1"
+            [max]="pageNumber.length"
+            [value]="currentPage"
+            (keyup)="handlePageNumberValue($event)"
+          />
+          <span class="text">of</span>
+          <span class="pageSize">{{ pageNumber.length || 0 }}</span>
+        </div>
+        <button
+          class="next-btn btn-filled"
+          (click)="pageChange(currentPage + 1)"
+          [disabled]="currentPage === pageNumber.length"
+        >
+          Next >
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

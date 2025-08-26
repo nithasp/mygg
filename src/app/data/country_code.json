@@ -1,0 +1,87 @@
+[
+    {
+        "country": "Australia",
+        "country_code": "61",
+        "iso_codes": "AU / AUS"
+    },
+    {
+        "country": "Brunei",
+        "country_code": "673",
+        "iso_codes": "BN / BRN"
+    },
+    {
+        "country": "Cambodia",
+        "country_code": "855",
+        "iso_codes": "KH / KHM"
+    },
+    {
+        "country": "China",
+        "country_code": "86",
+        "iso_codes": "CN / CHN"
+    },
+    {
+        "country": "Hong Kong",
+        "country_code": "852",
+        "iso_codes": "HK / HKG"
+    },
+    {
+        "country": "Indonesia",
+        "country_code": "62",
+        "iso_codes": "ID / IDN"
+    },
+    {
+        "country": "Japan",
+        "country_code": "81",
+        "iso_codes": "JP / JPN"
+    },
+    {
+        "country": "Laos",
+        "country_code": "856",
+        "iso_codes": "LA / LAO"
+    },
+    {
+        "country": "Malaysia",
+        "country_code": "60",
+        "iso_codes": "MY / MYS"
+    },
+    {
+        "country": "Myanmar",
+        "country_code": "95",
+        "iso_codes": "MM / MMR"
+    },
+    {
+        "country": "Philippines",
+        "country_code": "63",
+        "iso_codes": "PH / PHL"
+    },
+    {
+        "country": "Singapore",
+        "country_code": "65",
+        "iso_codes": "SG / SGP"
+    },
+    {
+        "country": "South Korea",
+        "country_code": "82",
+        "iso_codes": "KR / KOR"
+    },
+    {
+        "country": "Taiwan",
+        "country_code": "886",
+        "iso_codes": "TW / TWN"
+    },
+    {
+        "country": "Thailand",
+        "country_code": "66",
+        "iso_codes": "TH / THA"
+    },
+    {
+        "country": "United States",
+        "country_code": "1",
+        "iso_codes": "US / USA"
+    },
+    {
+        "country": "Vietnam",
+        "country_code": "84",
+        "iso_codes": "VN / VNM"
+    }
+]

@@ -1,0 +1,741 @@
+@import './font.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+:root {
+  --color-text-main: #05173d;
+}
+
+html[lang='th'] {
+  .mygg-title,
+  .mygg-subtitle {
+    letter-spacing: 0.02em;
+  }
+}
+
+body {
+  font-family: 'Myriad-Pro-Regular';
+  font-size: 1.1rem;
+  overflow-x: hidden;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  transition: 0.3s;
+  &:disabled {
+    cursor: not-allowed !important;
+  }
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input {
+  outline: none;
+}
+input[readonly] {
+  background-color: #e9ecef !important;
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  white-space: nowrap;
+}
+input,
+select,
+textarea {
+  border-radius: 4px;
+  border: 1px solid #515151;
+  background: #fff;
+  max-width: initial;
+  max-height: 40px;
+  width: 100%;
+  padding: 9px 12px;
+  color: #000;
+  outline: none;
+}
+::placeholder {
+  color: #939498;
+}
+select {
+  padding: 8px 12px;
+  min-height: 40px;
+}
+select:required:invalid {
+  color: gray;
+}
+option[value=''][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+input[type='radio'] {
+  position: relative;
+  -webkit-appearance: none;
+  width: 24px;
+  height: 28px;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid #051640;
+}
+
+input[type='radio']:before {
+  content: '';
+  display: block;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input[type='radio']:checked:before {
+  background: #051640;
+}
+
+input[type='radio']:checked {
+  border-color: #051640;
+}
+
+textarea {
+  min-height: 140px;
+  resize: none;
+}
+
+@layer utilities {
+  .text-align-last-auto {
+    text-align-last: auto;
+  }
+}
+
+.text-error {
+  color: #ac2028;
+}
+
+.hidden {
+  display: none;
+}
+
+#career-info {
+  ul {
+    list-style: initial;
+    padding-left: 24px;
+    margin-top: 4px;
+  }
+}
+
+// Datepicker
+#sign-up,
+#profile {
+  .daterangepicker-container {
+    position: relative;
+    max-width: 417px;
+    input {
+      border-radius: 4px;
+      border: 1px solid #515151;
+      background: #fff;
+      max-width: 417px;
+      max-height: 40px;
+      width: 100%;
+      padding: 9px 12px;
+      color: #000;
+    }
+
+    &:after {
+      content: '';
+      width: 16px;
+      height: 17.846px;
+      position: absolute;
+      top: 46%;
+      right: 3%;
+      transform: translateY(-50%);
+      background: url(../assets/images/sign-up/Calendar.png) no-repeat;
+      background-position: center;
+      background-size: contain;
+      pointer-events: none;
+    }
+  }
+  @media (max-width: 576px) {
+    .daterangepicker-container {
+      max-width: initial;
+      input {
+        max-width: initial;
+      }
+    }
+  }
+}
+
+#visa {
+  .dp-input-container {
+    input {
+      border-radius: 10px;
+      border: solid 3px #868686;
+      padding: 0.3rem 1rem;
+    }
+  }
+
+  .multiple-group {
+    input {
+      max-width: 170px;
+    }
+  }
+}
+.theme-default {
+  .bs-datepicker-head {
+    background-color: #05173d;
+    font-size: 1.3rem;
+  }
+}
+.bs-datepicker-body table {
+  th {
+    font-size: 1rem;
+    padding: 0 0.3rem;
+  }
+  td {
+    span {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+// Input radio customize
+.payment-info-content,
+#profile .gender {
+  /* The radio-container */
+  .radio-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Hide the browser's default radio button */
+
+  .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  /* Create a custom radio button */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    border-radius: 50%;
+    border: 2px solid #050128;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .radio-container:hover input ~ .checkmark {
+    background-color: #f0ebeb;
+  }
+
+  /* When the radio button is checked, add a blue background */
+  .radio-container input:checked ~ .checkmark {
+    background-color: white;
+    border: solid 3px #050128;
+  }
+
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the indicator (dot/circle) when checked */
+  .radio-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the indicator (dot/circle) */
+  .radio-container .checkmark:after {
+    top: 51%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 80%;
+    border-radius: 50%;
+    background: #050128;
+  }
+}
+
+// Input checkbox customize
+.payment-info-content {
+  .checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* Hide the browser's default checkbox */
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+
+    /* Create a custom checkbox */
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 24px;
+      width: 25px;
+      background-color: #fff;
+
+      border-radius: 10px;
+    }
+  }
+
+  /* On mouse-over, add a grey background color */
+  .checkbox-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .checkbox-container input:checked ~ .checkmark {
+    background-color: #2196f3;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+  .checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+  .checkbox-container .checkmark:after {
+    left: 50%;
+    top: 43%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 8px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+  }
+}
+
+// Mygg Dropzone
+.mygg-dropzone {
+  ngx-dropzone {
+    border-radius: 15px !important;
+    background-color: #cdd1d8 !important;
+    border: none !important;
+    height: 50px !important;
+    max-width: 750px !important;
+    font-family: 'Myriad-Pro-SemiBold' !important;
+    font-size: 20px !important;
+    color: #05173d66 !important;
+
+    overflow-y: hidden !important;
+  }
+  ngx-dropzone-preview {
+    background: none !important;
+    max-width: 250px !important;
+    justify-content: flex-start !important;
+    padding: 0 !important;
+    ngx-dropzone-label {
+      position: relative;
+      margin: 0 !important;
+      &:before {
+        display: inline-block;
+        content: '';
+        background: url(/assets/images/ticket/clip.png) no-repeat;
+        width: 22px;
+        height: 23px;
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        top: 2px;
+        right: 6px;
+      }
+    }
+  }
+
+  ngx-dropzone-remove-badge {
+    top: 55px !important;
+    right: 18px !important;
+    z-index: 10 !important;
+  }
+}
+.mygg-dropzone.active {
+  ngx-dropzone {
+    background-color: unset !important;
+  }
+  ngx-dropzone-preview {
+    ngx-dropzone-label {
+      font-size: 24px;
+      color: #05173d;
+    }
+  }
+}
+
+// Mygg Select
+#redemption {
+  .selected {
+    max-width: initial;
+  }
+}
+
+///// Checkbox customize ////
+.mygg-checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* Hide the browser's default checkbox */
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 24px;
+    width: 24px;
+
+    border-radius: 4px;
+    border: 2px solid #051640;
+    background-color: white;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: '';
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+
+    /* Style the checkmark/indicator */
+    width: 6px;
+    height: 14px;
+    border: 1px solid black;
+    border-width: 0 2.5px 2.5px 0;
+  }
+
+  input:checked {
+    .checkmark {
+      background-color: red;
+    }
+  }
+}
+/* On mouse-over, add a white background color */
+.mygg-checkbox-container:hover input ~ .checkmark {
+  background-color: white;
+}
+
+/* When the checkbox is checked, add a white background */
+.mygg-checkbox-container input:checked ~ .checkmark {
+  background-color: white;
+}
+
+/* Show the checkmark when checked */
+.mygg-checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+@media (min-width: 2000px) {
+  .main-page {
+    min-height: 100vh;
+  }
+}
+@media (max-width: 1024px) {
+  .qa-detail-wrapper {
+    padding: 4rem 2rem;
+    a {
+      word-break: break-all;
+    }
+  }
+  .qa-page ol,
+  .qa-page ul {
+    padding-left: 2rem;
+    ol,
+    ul {
+      padding-left: 1rem;
+    }
+  }
+}
+@media (max-width: 768px) {
+  #sign-up {
+    .daterangepicker-container {
+      max-width: initial;
+      input {
+        max-width: 100%;
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  #ticket {
+    ngx-dropzone {
+      height: 85px !important;
+    }
+    .select {
+      overflow-wrap: anywhere;
+    }
+  }
+  #select-topic {
+    .ticket-select {
+      padding: 1rem 0 !important;
+    }
+    .selected {
+      padding: 0.5rem 1rem;
+    }
+  }
+  .selected {
+    padding: 0.625rem 2.5vw !important;
+  }
+
+  .qa-page {
+    font-size: 1.1rem;
+  }
+}
+
+// Swal customize
+.mygg-swal-container {
+  background: rgba(0, 0, 0, 0.5) !important;
+  padding: 0 30px;
+  .mygg-swal-popup {
+    width: 400px;
+    height: 165px;
+  }
+  .mygg-swal-icon {
+    position: absolute;
+    top: 29px;
+    left: 20px;
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    border: none;
+  }
+  .mygg-swal-title {
+    font-family: 'Myriad-Pro-SemiBold';
+    font-size: 24px;
+    color: #0a0a0a;
+    padding: 0;
+    text-align: left;
+    padding: 24px 24px 0 56px;
+  }
+  .mygg-swal-text {
+    font-family: 'Myriad-Pro-Regular';
+    font-size: 16px;
+    height: max-content;
+    color: #616161;
+    margin: 0;
+    text-align: left;
+    padding: 11px 24px 16px 56px;
+  }
+  .mygg-swal-btn-wrapper {
+    font-family: 'Myriad-Pro-SemiBold';
+    width: 100%;
+    background-color: #f5f5f5;
+    height: 58px;
+    justify-content: end;
+    margin: 0;
+    button {
+      padding: 8px 16px;
+      max-height: 38px;
+      border-radius: 4px;
+    }
+    button:nth-of-type(1) {
+      margin-right: 12px;
+    }
+  }
+  .mygg-swal-confirm-btn {
+    background-color: #43936c;
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.12);
+    outline: none;
+    margin: 0 24px -2px 0;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+  .swal2-icon-content {
+    font-size: 0;
+  }
+  .swal2-cancel {
+    border-radius: 4px;
+    border: 1px solid #051640;
+    background: #fff;
+    color: #051640;
+    &:hover {
+      border: 1px solid #143d8d !important;
+      background: #fff !important;
+      color: #143d8d !important;
+    }
+    &:active {
+      border: 1px solid #06246c !important;
+      background: #fff !important;
+      color: #06246c !important;
+    }
+    &:disabled {
+      border: 1px solid #e6e6e6 !important;
+      color: #939498 !important;
+    }
+  }
+}
+
+// Accordion customize
+accordion-group {
+  max-width: 1144.33px;
+  min-height: 66px;
+  margin: 0px auto 16px auto;
+  padding: 0px 24px 16px 0px;
+  border-radius: 8px;
+  border: 1px solid #e6e6e6;
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+  transition: 0.5s;
+  .panel-title {
+    position: relative;
+    padding: 16px 0 0 60px;
+    font-family: 'Myriad-Pro-SemiBold';
+    font-size: 24px;
+    color: #000;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
+      left: 25px;
+      background: url(../assets/images/service/icon-question.png) no-repeat;
+      width: 24px;
+      height: 24px;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 70%;
+      transform: translateY(-50%);
+      right: 4px;
+      background: url(../assets/images/service/icon-arrow.png) no-repeat;
+      width: 13.333px;
+      height: 8px;
+      transition: 0.3s;
+    }
+  }
+  .panel-collapse {
+    position: relative;
+    top: 14px;
+  }
+  .panel-body {
+    padding-left: 23px;
+    max-width: 1035px;
+  }
+
+  @media (max-width: 1024px) {
+    .accordion-toggle {
+      position: relative;
+      top: 2px;
+    }
+    .panel-title {
+      font-size: 16px;
+      padding: 17px 0 0 60px;
+      &::before {
+        top: 70%;
+      }
+      &::after {
+        top: 80%;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .accordion-toggle {
+      max-width: 500px;
+    }
+  }
+  @media (max-width: 600px) {
+    .accordion-toggle {
+      position: relative;
+      top: 6px;
+      max-width: 250px;
+      button {
+        text-align: left;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    .panel-title {
+      &::after {
+        top: 60%;
+      }
+    }
+    .accordion-toggle {
+      max-width: 200px;
+    }
+  }
+  @media (max-width: 400px) {
+    .accordion-toggle {
+      max-width: 150px;
+    }
+  }
+}
+accordion-group.panel-open {
+  padding: 0px 24px 32px 0px;
+  .panel-title {
+    &::after {
+      transform: rotate(-180deg);
+    }
+  }
+}

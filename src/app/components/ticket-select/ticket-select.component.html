@@ -1,0 +1,29 @@
+<div class="ticket-select container" #ticketSelect>
+  <div class="select-box">
+    <div
+      class="options-container"
+      [ngClass]="isOptionsContainerActive === true ? 'active' : ''"
+    >
+      <div
+        class="option"
+        *ngFor="let item of optionItems"
+        (click)="handleSelect(item)"
+      >
+        <input
+          type="radio"
+          class="radio"
+          id="{{ item.id }}"
+          name="{{ item.name }}"
+        />
+        <label for="{{ item.name }}">{{ item.name }}</label>
+      </div>
+    </div>
+
+    <div
+      class="selected"
+      (click)="isOptionsContainerActive = !isOptionsContainerActive"
+    >
+      {{ optionPlaceholder || 'Select Topic' }}
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+.inner {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+h1 {
+  font-size: 6rem;
+  font-family: 'Myriad-Pro-Bold';
+  text-shadow: 1px 0px 1px #01001e, 1px 0px 1px #01001e, 1px 0px 1px #01001e,
+    1px 1px 5px #01001e, 1px 3px 1px #01001e, 1px 3px 1px #01001e,
+    1px 3px 1px #01001e, 1px 3px 1px #01001e, 1px 3px 1px #01001e;
+  color: white;
+  padding-top: 17rem;
+  letter-spacing: 0.3rem;
+}
+
+.submit-button {
+  font-family: "Myriad-Pro-Bold";
+  padding: 10px 40px;
+  border-radius: 10px;
+  background-color: #051640;
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  color: #fff;
+  transition: 0.3s;
+  margin-top: 2rem;
+  &:hover {
+    background-color: crimson;
+  }
+}

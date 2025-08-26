@@ -1,0 +1,12 @@
+<div class="wrapper">
+  <dropzone
+    [config]="config"
+    [message]="dropzoneMessages?.dropzoneBox.text"
+    (error)="onUploadError($event)"
+    (success)="onUploadSuccess($event)"
+    (sending)="handleSending()"
+    (totalUploadProgress)="handleTotalUploadProgress()"
+    (addedFile)="handleDrop($event)"
+    (removedFile)="handleRemove($event)"
+  ></dropzone>
+</div>

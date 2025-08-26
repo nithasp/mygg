@@ -1,0 +1,18 @@
+{
+  "career": {
+    "title": "ตำแหน่งที่เปิดรับ"
+  },
+  "career_info": {
+    "back": "กลับ",
+    "qualifications": "คุณสมบัติ:",
+    "responsibilities": "หน้าที่ และ ความรับผิดชอบ:",
+    "skills": "ทักษะ",
+    "text1": "สนใจมาร่วมสนุกกับเรา?",
+    "text2": "ส่งประวัติและผลงานมาได้เลย ที่ Email: <a href='mailto:recruit@ygg-cg.com'>recruit@ygg-cg.com</a>"
+  },
+  "no_career": {
+    "text1": "ยังไม่มีตำแหน่งใหม่เปิดรับสมัครในตอนนี้",
+    "text2": "สามารถติดตามการเปิดรับสมัครได้จากทางเว็บไซต์และ Facebook page: MYGG",
+    "back": "กลับสู่หน้าหลัก"
+  }
+}

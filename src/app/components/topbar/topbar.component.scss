@@ -1,0 +1,341 @@
+#topbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 72px;
+  background-color: black;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  .item {
+    position: relative;
+    transition: 0.3s;
+
+    &:hover {
+      color: #fcb134;
+    }
+    &:after {
+      display: none;
+      content: '';
+      position: absolute;
+      bottom: -8px;
+
+      left: 50%;
+      transform: translateX(-50%);
+      width: 132.5%;
+
+      height: 4px;
+      background-color: #fcb134;
+    }
+  }
+  .item.active {
+    &:after {
+      display: block;
+    }
+  }
+}
+.topbar-container.desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 113px 0 96px;
+  width: 100%;
+
+  .topbar-item1 {
+    display: flex;
+    align-items: center;
+
+    .logo {
+      margin-right: 35.48px;
+      cursor: pointer;
+    }
+    .menubar-wrapper {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .menubar-wrapper {
+    .item {
+      margin-right: 56px;
+    }
+  }
+
+  .topbar-item2 {
+    display: flex;
+    align-items: center;
+
+    .profile-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+  }
+  .auth {
+    cursor: pointer;
+    margin-right: 69px;
+  }
+  .username {
+    display: flex;
+    align-items: center;
+  }
+  .lang {
+    display: flex;
+    align-items: center;
+
+    .line {
+      background-color: white;
+      width: 2px;
+      height: 24px;
+      margin: 0 15px;
+      position: relative;
+      top: 1px;
+    }
+
+    .btn {
+      position: relative;
+      cursor: pointer;
+      &:after {
+        display: none;
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 53%;
+        transform: translateX(-50%);
+        background-color: white;
+        width: 37px;
+        height: 3px;
+      }
+    }
+    .btn.active {
+      &:after {
+        display: block;
+      }
+    }
+  }
+}
+
+.topbar-container.responsive {
+  display: none;
+  padding: 0 24px 0 20px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  .topbar-item1 {
+    display: flex;
+    align-items: center;
+    .hamburger-menu {
+      cursor: pointer;
+      margin-right: 24px;
+      z-index: 9001;
+      .line:nth-child(1) {
+        animation: line1AnimationReverse 0.3s forwards;
+      }
+      .line:nth-child(2) {
+        animation: line2AnimationReverse 0.3s forwards;
+      }
+      .line:nth-child(3) {
+        animation: line3AnimationReverse 0.3s forwards;
+      }
+      .line {
+        width: 24px;
+        height: 3px;
+        background-color: white;
+        margin-top: 6px;
+        border-radius: 4px;
+      }
+      .line:first-child {
+        margin-top: 0;
+      }
+    }
+    .hamburger-menu.active {
+      .line:nth-child(1) {
+        animation: line1Animation 0.3s forwards;
+      }
+      .line:nth-child(2) {
+        animation: line2Animation 0.3s forwards;
+      }
+      .line:nth-child(3) {
+        animation: line3Animation 0.3s forwards;
+      }
+    }
+  }
+  .topbar-item2 {
+    .profile-icon {
+      cursor: pointer;
+      position: relative;
+      z-index: 9001;
+    }
+  }
+}
+
+.responsive-menu {
+  font-family: 'Myriad-Pro-SemiBold';
+  position: fixed;
+  top: 72px;
+  left: 0;
+  max-width: 275px;
+  min-height: 491px;
+  background-color: #000;
+  color: #ffffff;
+  font-size: 24px;
+
+  transform: translateX(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
+  z-index: 9001;
+  .wrapper {
+    padding: 44px 83px 43px 77px;
+  }
+  .item {
+    margin-bottom: 28px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .item:last-of-type {
+    margin-bottom: 0;
+  }
+  .lang {
+    display: flex;
+    align-items: center;
+    margin-top: 82px;
+    .line {
+      background-color: white;
+      width: 2px;
+      height: 24px;
+      margin: 0 15px;
+      position: relative;
+      top: 1px;
+    }
+
+    .btn {
+      position: relative;
+      cursor: pointer;
+      &:after {
+        display: none;
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 53%;
+        transform: translateX(-50%);
+        background-color: white;
+        width: 37px;
+        height: 3px;
+      }
+    }
+    .btn.active {
+      &:after {
+        display: block;
+      }
+    }
+  }
+  .logo {
+    cursor: pointer;
+  }
+  .sign-out {
+    margin-top: 82px;
+  }
+}
+
+.responsive-menu.active {
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9000;
+
+  display: none;
+}
+.overlay.active {
+  display: block;
+}
+
+// Hamburger Menu Animation
+@keyframes line1Animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0px, 7px);
+  }
+  100% {
+    transform: rotate(45deg) translate(9px, 7px);
+  }
+}
+@keyframes line2Animation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes line3Animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0px, -4px);
+  }
+  100% {
+    transform: rotate(-45deg) translate(6px, -4px);
+  }
+}
+
+@keyframes line1AnimationReverse {
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(0.9rem);
+  }
+  0% {
+    transform: translateY(0.9rem) rotate(45deg);
+  }
+}
+@keyframes line2AnimationReverse {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes line3AnimationReverse {
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.7rem);
+  }
+  0% {
+    transform: translateY(-0.7rem) rotate(-45deg);
+  }
+}
+
+@media (max-width: 1700px) {
+  .topbar-container.desktop {
+    display: none;
+  }
+  .topbar-container.responsive {
+    display: flex;
+  }
+}
+
+@media (max-width: 400px) {
+  .responsive-menu {
+    .wrapper {
+      padding: 36px 36px 35px 37px;
+    }
+  }
+}

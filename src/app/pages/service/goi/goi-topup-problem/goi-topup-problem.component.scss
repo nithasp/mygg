@@ -1,0 +1,14 @@
+.goi-spec-section1 {
+  ol {
+    li:last-child {
+      position: relative;
+      left: 15px;
+      &:after {
+        content: '*';
+        position: absolute;
+        top: 0;
+        left: -45px;
+      }
+    }
+  }
+}

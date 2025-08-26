@@ -1,0 +1,15 @@
+{
+  "inbox": {
+    "title": "Inbox",
+    "selected": "message(s) selected",
+    "detail": "View detail >",
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "inbox_empty": {
+    "title": "Your inbox is empty"
+  },
+  "inbox_info": {
+    "back": "Back"
+  }
+}

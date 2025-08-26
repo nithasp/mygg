@@ -1,0 +1,331 @@
+<div id="profile-edit">
+  <div class="inner">
+    <h1 [innerHTML]="'profile.title' | translate">MYGG ID Account</h1>
+    <h2 [innerHTML]="'profile.sub_title' | translate">Personal Detail</h2>
+    <form
+      class="profile-edit-form"
+      [formGroup]="profileEditForm"
+      (ngSubmit)="updateUser()"
+    >
+      <div class="form-wrapper">
+        <div class="username item">
+          <div class="input-wrapper">
+            <label
+              for="username"
+              [innerHTML]="'profile.form.username' | translate"
+              >Username</label
+            >
+            <input
+              class=""
+              id="username"
+              type="text"
+              placeholder="Placeholder"
+              formControlName="username"
+              readonly
+            />
+          </div>
+        </div>
+        <div class="email item">
+          <div class="input-wrapper">
+            <label
+              for="email"
+              [innerHTML]="'profile.form.email.title' | translate"
+              >Email</label
+            >
+            <input
+              class=""
+              id="email"
+              type="text"
+              placeholder="Placeholder"
+              formControlName="email"
+            />
+          </div>
+
+          <p
+            class="note"
+            *ngIf="!email.touched"
+            [innerHTML]="'profile.form.email.note' | translate"
+          >
+            You can use this email address to retrieve your password.
+          </p>
+          <div class="error-msg" *ngIf="email.invalid && email.touched">
+            <small
+              class="text-error"
+              *ngIf="email.errors?.['required']"
+              [innerHTML]="'profile.form.error.required' | translate"
+              >The field is required.</small
+            >
+            <small
+              class="text-error"
+              *ngIf="email.errors?.['pattern']"
+              [innerHTML]="'profile.form.error.email.pattern' | translate"
+              >Email is invalid</small
+            >
+          </div>
+        </div>
+
+        <div class="firstname item">
+          <div class="input-wrapper">
+            <label
+              for="firstname"
+              [innerHTML]="'profile.form.firstname' | translate"
+              >First name</label
+            >
+            <input
+              class=""
+              id="firstname"
+              type="text"
+              placeholder="Placeholder"
+              formControlName="firstname"
+            />
+          </div>
+
+          <div class="error-msg" *ngIf="firstname.invalid && firstname.touched">
+            <small
+              class="text-error"
+              *ngIf="firstname.errors?.['required']"
+              [innerHTML]="'profile.form.error.required' | translate"
+              >The field is required.</small
+            >
+          </div>
+        </div>
+
+        <div class="lastname item">
+          <div class="input-wrapper">
+            <label
+              for="lastname"
+              [innerHTML]="'profile.form.lastname' | translate"
+              >Surname</label
+            >
+            <input
+              class=""
+              id="lastname"
+              type="text"
+              placeholder="Placeholder"
+              formControlName="lastname"
+            />
+          </div>
+
+          <div class="error-msg" *ngIf="lastname.invalid && lastname.touched">
+            <small
+              class="text-error"
+              *ngIf="lastname.errors?.['required']"
+              [innerHTML]="'profile.form.error.required' | translate"
+              >The field is required.</small
+            >
+          </div>
+        </div>
+
+        <div class="date item">
+          <div class="input-wrapper">
+            <label
+              for="lastname"
+              [innerHTML]="'profile.form.date_of_birth' | translate"
+              >Date of birth</label
+            >
+            <div class="daterangepicker-container">
+              <input
+                type="text"
+                placeholder="DD/MM/YYYY"
+                class="form-control"
+                [bsConfig]="bsConfig"
+                bsDatepicker
+                formControlName="date_of_birth"
+              />
+            </div>
+          </div>
+          <div
+            class="error-msg"
+            *ngIf="date_of_birth.invalid && date_of_birth.touched"
+          >
+            <small
+              class="text-error"
+              *ngIf="date_of_birth.errors?.['required']"
+              [innerHTML]="'profile.form.error.required' | translate"
+              >The field is required.</small
+            >
+          </div>
+        </div>
+
+        <div class="country item">
+          <div class="input-wrapper">
+            <label
+              for="country"
+              [innerHTML]="'profile.form.country' | translate"
+              >Country</label
+            >
+            <div class="select">
+              <app-mygg-select
+                [optionPlaceholder]="country.value"
+                [optionItems]="countries"
+                (changeTopic)="changeCountry($event)"
+              ></app-mygg-select>
+            </div>
+          </div>
+
+          <div class="error-msg" *ngIf="country.invalid && country.touched">
+            <small
+              class="text-error"
+              *ngIf="country.errors?.['required']"
+              [innerHTML]="'profile.form.error.required' | translate"
+              >The field is required.</small
+            >
+          </div>
+        </div>
+
+        <div class="telephone item">
+          <div class="telephone-form-wrapper">
+            <div class="country-code">
+              <div class="input-wrapper">
+                <label
+                  for="code"
+                  [innerHTML]="'profile.form.country_code' | translate"
+                  >Code</label
+                >
+                <div class="select">
+                  <app-mygg-select
+                    [optionPlaceholder]="mobile_country.value"
+                    [optionItems]="countriesCode"
+                    (changeTopic)="changeCountryCode($event)"
+                  ></app-mygg-select>
+                </div>
+                <input
+                  type="text"
+                  class="hidden"
+                  formControlName="mobile_country"
+                />
+              </div>
+
+              <div
+                class="error-msg"
+                *ngIf="mobile_country.invalid && mobile_country.touched"
+              >
+                <small
+                  class="text-error"
+                  *ngIf="mobile_country.errors?.['required']"
+                  [innerHTML]="'profile.form.error.required' | translate"
+                  >The field is required.</small
+                >
+              </div>
+            </div>
+
+            <div class="mobile-number">
+              <div class="input-wrapper">
+                <label
+                  for="mobile-number"
+                  [innerHTML]="'profile.form.phone_number' | translate"
+                  >Phone number</label
+                >
+                <input
+                  class=""
+                  id="mobile-number"
+                  type="text"
+                  placeholder="Placeholder"
+                  formControlName="mobile_number"
+                />
+              </div>
+
+              <div
+                class="error-msg"
+                *ngIf="mobile_number.invalid && mobile_number.touched"
+              >
+                <small
+                  class="text-error"
+                  *ngIf="mobile_number.errors?.['required']"
+                  [innerHTML]="'profile.form.error.required' | translate"
+                  >The field is required.</small
+                >
+                <small
+                  class="text-error"
+                  *ngIf="mobile_number.errors?.['pattern']"
+                  [innerHTML]="'profile.form.error.mobile_number.pattern' | translate"
+                  >Phone number should be numeric digits only.</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gender item">
+          <div class="input-wrapper">
+            <label
+              for="lastname"
+              [innerHTML]="'profile.form.gender.title' | translate"
+              >Gender</label
+            >
+            <div class="gender-wrapper">
+              <div class="female gender-item">
+                <input
+                  type="radio"
+                  class="cursor-pointer"
+                  [value]="1"
+                  formControlName="gender"
+                />
+                <label
+                  for=""
+                  class=""
+                  [innerHTML]="'profile.form.gender.female' | translate"
+                  >Female</label
+                >
+              </div>
+              <div class="male gender-item">
+                <input
+                  type="radio"
+                  [value]="0"
+                  formControlName="gender"
+                  class="cursor-pointer"
+                />
+                <label
+                  for=""
+                  class=""
+                  [innerHTML]="'profile.form.gender.male' | translate"
+                  >Male</label
+                >
+              </div>
+              <div class="no-gender gender-item">
+                <input
+                  type="radio"
+                  [value]="2"
+                  formControlName="gender"
+                  class="cursor-pointer"
+                />
+                <label
+                  for=""
+                  class=""
+                  [innerHTML]="'profile.form.gender.optional' | translate"
+                  >Rather not to say</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="error-msg" *ngIf="gender.invalid && gender.touched">
+            <small
+              class="text-error"
+              *ngIf="gender.errors?.['required']"
+              [innerHTML]="'profile.form.error.required' | translate"
+              >The field is required.</small
+            >
+          </div>
+        </div>
+      </div>
+      <div class="btn-wrapper">
+        <button
+          class="btn-border"
+          type="button"
+          (click)="getDefaultUserInfoValue()"
+          [innerHTML]="'profile.cancel' | translate"
+        >
+          Cancel
+        </button>
+        <button
+          class="btn-filled"
+          type="submit"
+          [innerHTML]="'profile.submit' | translate"
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="cookie-popup-wrapper" *ngIf="isCookiePopupDisplay">
+  <div class="inner">
+    <div class="cookie-popup-section1">
+      <div class="title">
+        <img
+          src="../../../assets/images/cookie/cookie-icon.png"
+          alt="cookie-icon"
+        />
+        <h1 [innerHTML]="'cookie_popup.title' | translate">Cookie Policy</h1>
+      </div>
+      <div class="text" [innerHTML]="'cookie_popup.text' | translate">
+        Our website uses cookies to improve your browsing <br />
+        experience. By using our site you agree to the use of cookies.
+      </div>
+      <a
+        routerLink="/cookie"
+        class="underline"
+        [innerHTML]="'cookie_popup.more' | translate"
+        >Learn More ></a
+      >
+    </div>
+    <div class="cookie-popup-section2">
+      <div class="button-wrapper">
+        <button
+          class="btn-border"
+          (click)="decline()"
+          [innerHTML]="'cookie_popup.decline' | translate"
+        >
+          Decline
+        </button>
+        <button
+          class="btn-filled"
+          (click)="allow()"
+          [innerHTML]="'cookie_popup.accept' | translate"
+        >
+          Accept
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

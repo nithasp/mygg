@@ -1,0 +1,93 @@
+// Mygg Button
+.btn-filled {
+  font-family: 'Myriad-Pro-SemiBold';
+  border-radius: 4px;
+  background-color: #051640;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: #143d8d;
+  }
+  &:active {
+    background-color: #06246c;
+  }
+  &:disabled {
+    border: 1px solid #939498 !important;
+    background-color: #e6e6e6 !important;
+    color: #939498 !important;
+  }
+}
+
+.btn-border {
+  font-family: 'Myriad-Pro-SemiBold';
+  border-radius: 4px;
+  border: 1px solid #051640;
+  background-color: #fff;
+  color: #051640;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #143d8d;
+    color: #143d8d;
+  }
+  &:active {
+    border: 1px solid #06246c;
+    color: #06246c;
+  }
+  &:disabled {
+    border: 1px solid #e6e6e6;
+    color: #939498;
+  }
+}
+
+.btn-ghost {
+  font-family: 'Myriad-Pro-SemiBold';
+  color: #051640;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    color: #143d8d;
+  }
+  &:active {
+    color: #06246c;
+  }
+  &:disabled {
+    color: #939498;
+  }
+}
+
+// Visual Picker
+.visual-picker {
+  .box {
+    position: relative;
+    border-radius: 4px;
+    border: 1px solid #dddbda;
+    background: #fff;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.1);
+    &::after {
+      display: none;
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 38px;
+      height: 38px;
+      background: url('../assets/images/topup/Check\ Indicator.png') no-repeat;
+      background-size: contain;
+    }
+
+    &:hover {
+      border: 2px solid #143d8d;
+    }
+  }
+}
+
+.visual-picker.active {
+  .box {
+    border: 2px solid #143d8d;
+    &::after {
+      display: block;
+    }
+  }
+}

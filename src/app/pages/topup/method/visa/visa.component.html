@@ -1,0 +1,135 @@
+<div id="visa">
+  <div class="inner relative">
+    <div
+      class="visa-content mt-14 py-5 bg-white shadow-[0px_8px_12.5px_0.5px_#020e26] grid grid-cols-[0.75fr_1fr] min-h-screen"
+    >
+      <div class="order-details font-['Myriad-Pro-Bold'] px-6">
+        <div
+          class="title text-[#051640] text-[47px] tracking-[4.7px] text-center mb-6"
+        >
+          Order Details
+        </div>
+        <div
+          class="coin-value text-[#051640] text-[28px] tracking-[2.8px] text-center -mb-3"
+        >
+          {{ amount || 0 }}THB
+        </div>
+        <div class="coin-logo">
+          <img
+            src="../../../../../assets/images/method/Fn_big_shadow.png"
+            alt="coin-logo"
+            class="w-auto h-auto mx-auto"
+          />
+        </div>
+        <div class="details text-[29.5px] tracking-[2.95px]">
+          <div class="detail">
+            <span>Current Balance : </span>
+            <span>XXXX Coins</span>
+          </div>
+          <div class="detail">
+            <span>Buying :</span>
+            <span>{{ coinPoint || '0' }} Coins</span>
+          </div>
+          <div class="detail">
+            <span>New Balance :</span>
+            <span>XXXX Coins</span>
+          </div>
+          <div class="detail">
+            <span>Total :</span>
+            <span>THB XXXX</span>
+          </div>
+        </div>
+      </div>
+      <div class="payment-info">
+        <div
+          class="title text-[#051640] text-[47px] tracking-[4.7px] text-center font-['Myriad-Pro-Bold']"
+        >
+          Payment Information
+        </div>
+
+        <div class="payment-info-content px-12 py-8">
+          <div class="card-type flex mb-4">
+            <div class="visa-type flex items-center mr-12">
+              <label class="radio-container">
+                <input type="radio" checked="checked" name="radio" />
+                <span class="checkmark"></span>
+              </label>
+
+              <img
+                src="../../../../../assets/images/method/visa/Payment_Visa.png"
+                alt="visa-logo"
+                class="w-auto h-auto mx-auto"
+              />
+            </div>
+            <div class="mastercard-type flex items-center">
+              <label class="radio-container">
+                <input type="radio" name="radio" />
+                <span class="checkmark"></span>
+              </label>
+              <img
+                src="../../../../../assets/images/method/visa/Payment_MasterCard.png"
+                alt="mastercard-logo"
+                class="w-auto h-auto mx-auto"
+              />
+            </div>
+          </div>
+
+          <div class="card-info">
+            <div class="form-group">
+              <label for="cardholder-name">Cardholder name :</label>
+              <input type="text" id="cardholder-name" class="w-full" />
+            </div>
+            <div class="form-group">
+              <label for="cardnumber-name">Card Number :</label>
+              <input type="text" id="cardnumber-name" class="w-full" />
+            </div>
+
+            <div class="multiple-group flex">
+              <div class="form-group mr-12">
+                <label for="expiry-date">Expiry Date :</label>
+                <div class="daterangepicker-container">
+                  <input
+                    type="text"
+                    placeholder="MM / YY"
+                    class="form-control"
+                    [bsConfig]="bsConfig"
+                    bsDatepicker
+                    formControlName="date_of_birth"
+                    [minMode]="'month'"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="cvv">CVC / CVV :</label>
+                <input type="text" id="cvv" />
+              </div>
+            </div>
+          </div>
+
+          <div class="save-info flex mr-12">
+            <label class="checkbox-container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <span>Save for my next payment</span>
+          </div>
+
+          <div
+            class="barcode-button-visa flex justify-center mt-12 cursor-pointer"
+            (click)="visaPay()"
+          >
+            <barcode-button
+              textValue="PAY"
+              paddingValue="0 40px"
+            ></barcode-button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <mygg-back-button
+      (click)="backToChooseMethodPage()"
+      class="absolute bottom-0 left-0"
+    ></mygg-back-button>
+  </div>
+</div>

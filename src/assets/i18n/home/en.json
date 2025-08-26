@@ -1,0 +1,33 @@
+{
+  "home": {
+    "section1": {
+      "title1": "Game Publisher and",
+      "title2": " Digital Entertainment"
+    },
+    "section2": {
+      "2_1": {
+        "title": "Why MYGG is a Powerful Choice",
+        "content": "MYGG COMPANY LIMITED is a new and innovative company that specializes in game publishing and digital entertainment."
+      },
+      "2_2": {
+        "sub_title": "We offer 3 core services",
+        "item1": {
+          "title": "Publisher Service",
+          "detail": "We are a leading online game developer and provider in Thailand, known for our popular game franchise Home Sweet Home: Online. Our goal is to elevate the Thai game industry to the global stage while providing the best gaming experience to players in Southeast Asia."
+        },
+        "item2": {
+          "title": "Marketing Service",
+          "detail": "We provide all-in-one online and offline marketing services to help you achieve the best results. Our high-quality team offers expert consultation and support throughout every step of the process."
+        },
+        "item3": {
+          "title": "Game developer and publisher services",
+          "detail": "We are a producer and creator of world-class quality works, operating under the supervision of YGGDRAZIL GROUP PUBLIC COMPANY LIMITED, the country's leading VFX producer, and a top-tier animation and game production company in Thailand, providing services for over 18 years. We have gained international recognition, which motivates us to continue creating high-quality works for everyone."
+        }
+      }
+    },
+    "section3": {
+      "content1": "Our highly skilled team is dedicated to providing exceptional services and consultation, delivering the best results for all of our clients. We operate under the guidance of YGGDRAZIL GROUP PUBLIC COMPANY LIMITED and Master Ad Public Company Limited (MACO), one of Thailand's leading out-of-home (OOH) advertising companies.",
+      "content2": "Experience results that always exceed expectations at MYGG."
+    }
+  }
+}

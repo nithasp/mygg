@@ -1,0 +1,73 @@
+#support {
+  background: url('../../../assets/images/service/Customer-service-BG.jpg');
+  background-size: cover;
+}
+
+.support-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 33px;
+}
+.content {
+  max-width: 1146px;
+  width: 100%;
+  min-height: 522px;
+
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+
+  z-index: 11;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .title1 {
+    color: #020822;
+
+    font-size: 32px;
+  }
+  .title2 {
+    font-family: 'Myriad-Pro-SemiBold';
+    color: #020822;
+
+    font-size: 52px;
+  }
+}
+
+.submit-button {
+  text-align: center;
+  margin-top: 40px;
+  button {
+    font-family: 'Myriad-Pro-SemiBold';
+    padding: 8px 16px;
+    border-radius: 4px;
+    background-color: #051640;
+    font-size: 18px;
+    color: #fff;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #660000;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    .title1 {
+      font-size: 16px;
+    }
+    .title2 {
+      font-size: 24px;
+    }
+  }
+}
+
+@media (max-height: 900px) {
+  .content {
+    margin: 100px auto 0 auto;
+  }
+}

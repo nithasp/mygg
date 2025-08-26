@@ -1,0 +1,135 @@
+<div id="purchase-history">
+  <div class="inner">
+    <div class="title">
+      <h1 [innerHTML]="'purchase_history.title' | translate">
+        Purchase History
+      </h1>
+      <h2>
+        <span [innerHTML]="'purchase_history.total' | translate"
+          >Total Spent:</span
+        >
+        <span>&nbsp;</span>
+        <span>8,980</span>
+        <span>&nbsp;</span>
+        <span [innerHTML]="'purchase_history.currency' | translate">THB</span>
+      </h2>
+    </div>
+    <table class="purchase-history desktop">
+      <thead>
+        <tr>
+          <th
+            class="th-no"
+            [innerHTML]="'purchase_history.table.no' | translate"
+          >
+            No.
+          </th>
+          <th
+            class="th-date"
+            [innerHTML]="'purchase_history.table.date' | translate"
+          >
+            Date
+          </th>
+          <th
+            class="th-detail"
+            [innerHTML]="'purchase_history.table.detail' | translate"
+          >
+            Detail
+          </th>
+          <th
+            class="th-payment-method"
+            [innerHTML]="'purchase_history.table.payment_method' | translate"
+          >
+            Payment Method
+          </th>
+          <th
+            class="th-amount"
+            [innerHTML]="'purchase_history.table.amount' | translate"
+          >
+            Amount
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of purchaseFilter">
+          <td class="td-no">{{ item.no }}</td>
+          <td class="td-date">{{ item.date }}</td>
+          <td class="td-detail">{{ item.detail }}</td>
+          <td class="td-payment-method">{{ item.payment_method }}</td>
+          <td class="td-amount">
+            <span>{{ item.amount }}&nbsp;</span>
+            <span [innerHTML]="'purchase_history.currency' | translate"
+              >THB</span
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="purchase-history responsive">
+      <div class="item" *ngFor="let item of purchaseFilter">
+        <div class="wrapper">
+          <div class="item-detail no">
+            <h3 [innerHTML]="'purchase_history.table.no' | translate">No</h3>
+            <p>{{ item.no }}</p>
+          </div>
+          <div class="item-detail date">
+            <h3 [innerHTML]="'purchase_history.table.date' | translate">
+              Date
+            </h3>
+            <p>17/04/2023 8:30 PM</p>
+          </div>
+        </div>
+        <div class="item-detail detail">
+          <h3 [innerHTML]="'purchase_history.table.detail' | translate">
+            Detail
+          </h3>
+          <p>625 Diamonds</p>
+        </div>
+        <div class="item-detail payment-method">
+          <h3 [innerHTML]="'purchase_history.table.payment_method' | translate">
+            Payment Method
+          </h3>
+          <p>Credit Card - Visa</p>
+        </div>
+        <div class="item-detail amount">
+          <h3 [innerHTML]="'purchase_history.table.amount' | translate">
+            Amount
+          </h3>
+          <p>
+            <span>250&nbsp;</span>
+            <span [innerHTML]="'purchase_history.currency' | translate"
+              >THB</span
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <button
+        class="prev-btn btn-ghost"
+        (click)="pageChange(currentPage - 1)"
+        [disabled]="currentPage === 1"
+      >
+        < Previous
+      </button>
+      <div class="page-wrapper">
+        <input
+          type="number"
+          class="current-page"
+          min="1"
+          [max]="pageNumber.length"
+          [value]="currentPage"
+          (keyup)="handlePageNumberValue($event)"
+        />
+        <span class="text">of</span>
+        <span class="pageSize">{{ pageNumber.length || 0 }}</span>
+      </div>
+      <button
+        class="next-btn btn-filled"
+        (click)="pageChange(currentPage + 1)"
+        [disabled]="currentPage === pageNumber.length"
+      >
+        Next >
+      </button>
+    </div>
+  </div>
+</div>

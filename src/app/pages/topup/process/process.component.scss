@@ -1,0 +1,87 @@
+.inner {
+  box-shadow: 0px 8px 12.5px 0.5px #020e26;
+  background-color: #fff;
+  min-height: 80vh;
+}
+
+.error,
+.wait {
+  .msg {
+    font-family: 'Myriad-Pro-Bold';
+    color: #051640;
+  }
+  .msg1 {
+    font-size: 44.5px;
+    letter-spacing: 4.45px;
+  }
+  .msg2 {
+    font-size: 32px;
+    letter-spacing: 3.2px;
+    margin-top: -0.5rem;
+  }
+  .msg3 {
+    font-family: 'Myriad-Pro-Regular';
+    font-size: 18px;
+    letter-spacing: 1.8px;
+  }
+}
+
+.success {
+  color: #051640;
+  .msg1 {
+    font-family: 'Myriad-Pro-Bold';
+    font-size: 44.5px;
+    letter-spacing: 4.45px;
+  }
+  .msg2 {
+    font-family: 'Myriad-Pro-Regular';
+    font-size: 18px;
+    letter-spacing: 1.8px;
+    margin-bottom: 0.5rem;
+  }
+  .msg3,
+  .msg4 {
+    font-family: 'Myriad-Pro-Bold';
+    font-size: 19.5px;
+    letter-spacing: 1.95px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    span:nth-child(1) {
+      text-align: left;
+    }
+    span:nth-child(2) {
+      text-align: right;
+    }
+  }
+}
+
+.submit-button {
+  text-align: center;
+  button {
+    font-family: 'Myriad-Pro-Bold';
+    padding: 10px 40px;
+    border-radius: 10px;
+    background-color: #051640;
+    font-size: 26px;
+    letter-spacing: 2.6px;
+    color: #fff;
+    transition: 0.3s;
+    &:hover {
+      background-color: #660000;
+    }
+  }
+}
+
+
+.wait-icon {
+  animation: rotateSuccess 2.5s infinite;
+}
+
+@keyframes rotateSuccess {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,88 @@
+<div id="game-method" class="topup-content">
+  <div class="inner">
+    <div class="welcome-wrapper">
+      <app-welcome></app-welcome>
+    </div>
+    <div class="purchase-method">
+      <h1>Select Purchase Method</h1>
+      <div class="wrapper">
+        <div class="item-wrapper">
+          <div class="method visual-picker" *ngFor="let item of purchaseMethod">
+            <div class="method-icon box">
+              <img [src]="item.image" [alt]="item.name" />
+            </div>
+            <div class="method-name name">
+              {{ language === 'en' ? item.name : item.name_th }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="purchase-diamond">
+      <h1>Select Diamonds</h1>
+      <div class="wrapper">
+        <div class="item-wrapper">
+          <div class="diamond visual-picker" *ngFor="let item of diamond">
+            <div class="diamond-icon box">
+              <img
+                src="../../../../assets/images/topup/diamond.png"
+                alt="diamond"
+              />
+              <span class="diamond-value">
+                x {{ item.diamond_value | number }}
+              </span>
+            </div>
+            <div class="method-name name en" *ngIf="language === 'en'">
+              <span class="currency">{{ item.currency }} </span>
+              <span class="value">{{ item.value | number }}</span>
+            </div>
+            <div class="method-name name th" *ngIf="language === 'th'">
+              <span class="value">{{ item.value | number }} </span>
+              <span class="currency">{{ item.currency_th }} </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button-wrapper">
+      <button class="back btn-border" routerLink="../../">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="14"
+          viewBox="0 0 15 14"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.73898 2.04689C8.18958 1.59628 8.18958 0.865708 7.73898 0.415103C7.28837 -0.0355029 6.5578 -0.0355029 6.10719 0.415103L0.337954 6.18434C-0.112651 6.63494 -0.112651 7.36552 0.337954 7.81613L6.10719 13.5854C6.5578 14.036 7.28837 14.036 7.73898 13.5854C8.18958 13.1348 8.18958 12.4042 7.73898 11.9536L3.93949 8.15408H13.8462C14.4834 8.15408 15 7.63749 15 7.00024C15 6.36298 14.4834 5.84639 13.8462 5.84639H3.93948L7.73898 2.04689Z"
+            fill="white"
+          />
+        </svg>
+        <span>Back</span>
+      </button>
+      <button
+        class="next btn-filled"
+        routerLink="/topup/success"
+        [disabled]="!purchaseMethodValue || !coinValue"
+      >
+        <span>Next</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="15"
+          height="14"
+          viewBox="0 0 15 14"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.26102 11.9531C6.81042 12.4037 6.81042 13.1343 7.26102 13.5849C7.71163 14.0355 8.4422 14.0355 8.89281 13.5849L14.662 7.81566C15.1127 7.36506 15.1127 6.63448 14.662 6.18387L8.89281 0.414636C8.4422 -0.0359694 7.71163 -0.0359694 7.26102 0.414636C6.81042 0.86524 6.81042 1.59582 7.26102 2.04642L11.0605 5.84592L1.15384 5.84591C0.516586 5.84591 -8.8758e-06 6.36251 -8.93151e-06 6.99976C-8.98722e-06 7.63701 0.516586 8.15361 1.15384 8.15361L11.0605 8.15361L7.26102 11.9531Z"
+            fill="#051640"
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>

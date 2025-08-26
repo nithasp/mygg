@@ -1,0 +1,37 @@
+<div class="services-wrapper max-w-[1200px] mx-auto py-12 relative">
+  <div
+    class="customer-service-title text-center font-['Myriad-Pro-Bold'] text-[#05173d] light-intense-white text-4xl xs:text-5xl tracking-widest mb-3"
+  >
+    CUSTOMER SERVICE
+  </div>
+  <div
+    class="container mx-auto w-full grid grid-cols-1 gap-y-11 text-center gap-x-5 sm:grid-cols-2 md:gap-y-20 xl:grid-cols-4 xl:gap-x-32 2xl:px-10"
+  >
+    <div
+      class="services flex flex-col items-center"
+      *ngFor="let service of services"
+    >
+      <a routerLink="{{ service.link }}">
+        <div class="image-wrapper w-[260px] h-auto grow my-2">
+          <div class="w-[150px] h-[172px] mx-auto">
+            <img
+              src="{{ service.image }}"
+              alt="{{ service.service_name }}"
+              *ngIf="service.image"
+            />
+            <img
+              src="../../../assets/images/topup/Mock_Game2.png"
+              alt="service.service_name"
+              *ngIf="!service.image"
+            />
+          </div>
+        </div>
+        <p
+          class="service-name text-xl light-intense-white font-['SukhumvitSet-Bold'] whitespace-nowrap"
+        >
+          {{ service.service_name }}
+        </p>
+      </a>
+    </div>
+  </div>
+</div>

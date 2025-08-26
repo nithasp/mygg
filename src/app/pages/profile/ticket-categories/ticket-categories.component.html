@@ -1,0 +1,133 @@
+<div id="ticket-categories">
+  <div class="inner">
+    <div class="title">
+      <h1 [innerHTML]="'ticket_categories.title' | translate">
+        Ticket Categories
+      </h1>
+      <div class="submit-ticket">
+        <button
+          class="btn-filled"
+          routerLink="/ticket"
+          [innerHTML]="'ticket_categories.submit' | translate"
+        >
+          Submit Ticket
+        </button>
+      </div>
+    </div>
+    <table class="ticket-categories desktop">
+      <thead>
+        <tr>
+          <th
+            class="th-no"
+            [innerHTML]="'ticket_categories.table.no' | translate"
+          >
+            No.
+          </th>
+          <th
+            class="th-ticket-no"
+            [innerHTML]="'ticket_categories.table.ticket_no' | translate"
+          >
+            Ticket No.
+          </th>
+          <th
+            class="th-create-date"
+            [innerHTML]="'ticket_categories.table.date' | translate"
+          >
+            Create Date
+          </th>
+          <th
+            class="th-subject"
+            [innerHTML]="'ticket_categories.table.subject' | translate"
+          >
+            Subject
+          </th>
+          <th
+            class="th-status"
+            [innerHTML]="'ticket_categories.table.status' | translate"
+          >
+            Status
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of ticketCategoriesFilter">
+          <td class="td-no">{{ item.no }}</td>
+          <td class="td-ticket-no">{{ item.ticket_no }}</td>
+          <td class="td-create-date">{{ item.create_date }}</td>
+          <td class="td-subject">{{ item.subject }}</td>
+          <td
+            class="td-status"
+            [ngClass]="item.status === 'Completed' ? 'completed' : ''"
+          >
+            {{ item.status }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="ticket-categories responsive">
+      <div class="item" *ngFor="let item of ticketCategoriesFilter">
+        <div class="wrapper">
+          <div class="item-detail no">
+            <h3 [innerHTML]="'ticket_categories.table.no' | translate">No</h3>
+            <p>{{ item.no }}</p>
+          </div>
+          <div class="item-detail create-date">
+            <h3 [innerHTML]="'ticket_categories.table.date' | translate">
+              Create Date
+            </h3>
+            <p>{{ item.create_date }}</p>
+          </div>
+        </div>
+        <div class="item-detail ticket-no">
+          <h3 [innerHTML]="'ticket_categories.table.ticket_no' | translate">
+            Ticket No.
+          </h3>
+          <p>{{ item.ticket_no }}</p>
+        </div>
+        <div class="item-detail subject">
+          <h3 [innerHTML]="'ticket_categories.table.subject' | translate">
+            Subject
+          </h3>
+          <p>{{ item.subject }}</p>
+        </div>
+        <div
+          class="item-detail status"
+          [ngClass]="item.status === 'Completed' ? 'completed' : ''"
+        >
+          <h3 [innerHTML]="'ticket_categories.table.status' | translate">
+            Status
+          </h3>
+          <p>{{ item.status }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="pagination">
+      <button
+        class="prev-btn btn-ghost"
+        (click)="pageChange(currentPage - 1)"
+        [disabled]="currentPage === 1"
+      >
+        < Previous
+      </button>
+      <div class="page-wrapper">
+        <input
+          type="number"
+          class="current-page"
+          min="1"
+          [max]="pageNumber.length"
+          [value]="currentPage"
+          (keyup)="handlePageNumberValue($event)"
+        />
+        <span class="text">of</span>
+        <span class="pageSize">{{ pageNumber.length || 0 }}</span>
+      </div>
+      <button
+        class="next-btn btn-filled"
+        (click)="pageChange(currentPage + 1)"
+        [disabled]="currentPage === pageNumber.length"
+      >
+        Next >
+      </button>
+    </div>
+  </div>
+</div>

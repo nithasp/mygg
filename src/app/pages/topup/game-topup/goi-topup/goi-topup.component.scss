@@ -1,0 +1,42 @@
+#goi-topup {
+  background: url(../../../../../assets/images/method/method-bg.jpg) no-repeat;
+  background-size: cover;
+}
+.mygg-coins {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1.5rem;
+  row-gap: 2rem;
+}
+.methods {
+  gap: 0.6rem;
+}
+.method {
+  border: 5px solid #05173d;
+  border-radius: 25px;
+  padding: 0rem 0.5rem;
+}
+.method.active {
+  border: 5px solid red;
+}
+.coin {
+  padding: 0px 0px 3px 0px;
+  border-radius: 20px;
+  background-color: #112349;
+  border: 5px solid transparent;
+}
+
+.coin.active {
+  border: 5px solid red;
+}
+
+.truemoney {
+  img {
+    height: 80%;
+  }
+}
+.coin-to-game {
+  img {
+    height: 90%;
+  }
+}

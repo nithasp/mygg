@@ -1,0 +1,13 @@
+{
+  "ticket_categories": {
+    "title": "Purchase History",
+    "submit": "Submit Ticket",
+    "table": {
+      "no": "No.",
+      "ticket_no": "Ticket No.",
+      "date": "Create Date",
+      "subject": "Subject",
+      "status": "Status"
+    }
+  }
+}

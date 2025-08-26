@@ -1,0 +1,122 @@
+<section id="career-info">
+  <div class="inner">
+    <div class="info">
+      <div class="back-button" routerLink="../">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="12"
+          viewBox="0 0 16 12"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M7.86603 1.74433L6.70391 0L0 5.66013L5.63175 12L7.00132 10.4582L3.81218 6.86808H15.9995V4.68767H4.37991L7.86603 1.74433Z"
+            fill="#051640"
+          />
+        </svg>
+        <span [innerHTML]="'career_info.back' | translate">Back</span>
+      </div>
+      <div class="info-section1">
+        <h1 class="title">Content Creator {{ careerDetail?.id }}</h1>
+        <div class="location">Bangkok, Thailand</div>
+        <p [innerHTML]="careerDetail?.description">
+          If you're passionate about gaming, enjoy creating content to share
+          gaming stories, excel at communicating with a wide audience, immerse
+          yourself in social media usage, and dream of working in the gaming
+          industry, this is your opportunity! We're looking for a dedicated team
+          ready to dive in and craft entertaining content for players. Present
+          the necessary content that ensures players feel engaged and
+          well-informed for a gaming experience they'll cherish. Join us as a
+          part of the Marketing team that's poised to effectively communicate
+          various elements to players.
+        </p>
+      </div>
+      <div class="info-section2">
+        <div class="qualifications">
+          <h2 [innerHTML]="'career_info.qualifications' | translate">
+            Qualifications:
+          </h2>
+          <div class="content" [innerHTML]="careerDetail?.qualifications">
+            <ul>
+              <li>
+                Bachelor's degree in Marketing, Mass Communication, Journalism,
+                Media Studies, or a related field.
+              </li>
+              <li>Minimum of 2 years of experience in writing.</li>
+              <li>
+                Minimum of 1 year of experience in the gaming industry
+                (preferred).
+              </li>
+              <li>
+                Strong knowledge and understanding of Social Media platforms.
+              </li>
+              <li>
+                Attention to detail and high proficiency in Thai spelling and
+                grammar.
+              </li>
+              <li>Upper-intermediate level of English language skills.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="responsibilities">
+          <h2 [innerHTML]="'career_info.responsibilities' | translate">
+            Responsibilities:
+          </h2>
+          <div class="content" [innerHTML]="careerDetail?.responsibilities">
+            <ul>
+              <li>
+                Develop strategies and create content for Social Media or
+                organizational articles that align with the organization's
+                communication objectives, enhancing the brand image and sales of
+                the organization and games.
+              </li>
+              <li>
+                Collaborate with the Marketing Team and Game Team to plan
+                content.
+              </li>
+              <li>Plan and schedule game content.</li>
+              <li>
+                Coordinate, control, and review the work of Graphic Designers
+                and Video Editors to ensure alignment with written content.
+              </li>
+              <li>Manage content timelines.</li>
+              <li>
+                Identify target audiences for organizational or game messaging.
+              </li>
+              <li>Stay updated on Social Media trends and movements.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="skills">
+          <h2 [innerHTML]="'career_info.skills' | translate">Skill Sets:</h2>
+          <div class="content" [innerHTML]="careerDetail?.skills">
+            <ul>
+              <li>
+                Proficient in Microsoft Office, Google Sheets, Google Slides, or
+                Canva.
+              </li>
+              <li>Strong communication and English writing skills.</li>
+              <li>
+                Creative thinker able to design engaging content that aligns
+                well with objectives.
+              </li>
+              <li>Enthusiastic, responsible, and quick to respond.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="info-section3">
+        <p [innerHTML]="'career_info.text1' | translate">
+          Interested in joining the fun with us?
+        </p>
+        <p [innerHTML]="'career_info.text2' | translate">
+          Feel free to send your resume and portfolio to the following email
+          address:
+          <a href="mailto:recruit@ygg-cg.com">recruit@ygg-cg.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

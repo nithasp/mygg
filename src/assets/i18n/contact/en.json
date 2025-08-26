@@ -1,0 +1,24 @@
+{
+  "contact_us": {
+    "title": "Contact Us",
+    "address1": {
+      "1": "THAILAND BUSINESS <div class='block'></div> DEPARTMENT",
+
+      "2": "348 2nd Floor Soi Ladprao 94 (Punjamitr), Phlapphla, Wangthonglang, Bangkok, Thailand 10310",
+      "email": "Email: info@mygg-game.com",
+      "tel": "Tel: (662) 934 4364",
+      "fax": "Fax: (662) 9344 560"
+    },
+    "address2": {
+      "1": "GLOBAL BUSINESS <div class='block'></div>DEPARTMENT",
+      "2": {
+        "name": "PIYAPON SUKSAN (ZEN)",
+        "email": "Email: globalbd@ygg-cg.com"
+      },
+      "3": {
+        "name": "JANTAKAN SIROROT (KARN)",
+        "email": "Email: producer@ygg-cg.com"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+#bank {
+  color: #051640;
+}
+
+.bank-section1 {
+  .payment-ref1 {
+    .no {
+      font-family: 'Myriad-Pro-Bold';
+      font-size: 41px;
+      letter-spacing: 4.1px;
+    }
+    .code {
+      font-family: 'Myriad-Pro-Bold';
+      font-size: 53px;
+      letter-spacing: 5.3px;
+    }
+  }
+  .payment-ref2 {
+    .no {
+      font-family: 'Myriad-Pro-Bold';
+      font-size: 41px;
+      letter-spacing: 4.1px;
+    }
+  }
+}
+
+.bank-section2 {
+  .amount {
+    .title {
+      font-family: 'Myriad-Pro-Bold';
+      font-size: 41px;
+      letter-spacing: 4.1px;
+    }
+    .price {
+      font-family: 'Myriad-Pro-Bold';
+      font-size: 53px;
+      letter-spacing: 5.3px;
+    }
+  }
+  .date {
+    font-size: 23px;
+    letter-spacing: 2.3px;
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "redeem": {
+    "title": "Redeem Code",
+    "text1": "Please enter your gift card, virtual item, or promo code below.",
+    "game_name": "Game name",
+    "game_id": "Game ID",
+    "code": "Enter redemption code",
+    "submit": "Redeem",
+    "error": {
+      "required": "The field is required."
+    }
+  }
+}

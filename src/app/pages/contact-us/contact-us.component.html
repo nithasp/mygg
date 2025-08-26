@@ -1,0 +1,39 @@
+<section id="contact-us">
+  <div class="inner">
+    <div class="title" [innerHTML]="'contact_us.title' | translate"></div>
+    <div class="contact-us-content">
+      <div class="map">
+        <img
+          src="../../../assets/images/contact-us/map-mockup.jpg"
+          alt="map-mockup"
+        />
+      </div>
+
+      <div class="address">
+        <div class="address1">
+          <h2 [innerHTML]="'contact_us.address1.1' | translate"></h2>
+          <div
+            class="info1"
+            [innerHTML]="'contact_us.address1.2' | translate"
+          ></div>
+          <div class="info2">
+            <p [innerHTML]="'contact_us.address1.email' | translate"></p>
+            <p [innerHTML]="'contact_us.address1.tel' | translate"></p>
+            <p [innerHTML]="'contact_us.address1.fax' | translate"></p>
+          </div>
+        </div>
+        <div class="address2">
+          <h2 [innerHTML]="'contact_us.address2.1' | translate"></h2>
+          <div class="info1">
+            <p [innerHTML]="'contact_us.address2.2.name' | translate"></p>
+            <p [innerHTML]="'contact_us.address2.2.email' | translate"></p>
+          </div>
+          <div class="info2">
+            <p [innerHTML]="'contact_us.address2.3.name' | translate"></p>
+            <p [innerHTML]="'contact_us.address2.3.email' | translate"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

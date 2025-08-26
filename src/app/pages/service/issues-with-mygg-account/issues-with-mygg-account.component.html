@@ -1,0 +1,24 @@
+<div id="issues-with-mygg-account" class="service-content">
+  <accordion [isAnimated]="true" [closeOthers]="true">
+    <accordion-group [heading]="'service.issue_account.item1.title' | translate">
+      <ol [innerHTML]="'service.issue_account.item1.content' | translate">
+        <li>
+          Go to the website
+          <a href="{{ mainUrl }}">{{ mainUrl }}</a>
+        </li>
+        <li>Click on the "Sign up" button</li>
+        <li>Fill in your username and password</li>
+        <li>Click "Agree."</li>
+      </ol>
+    </accordion-group>
+    <accordion-group [heading]="'service.issue_account.item2.title' | translate">
+      <p [innerHTML]="'service.issue_account.item2.content' | translate">
+        Visit the website
+        <a href="{{ mainUrl }}/reset-password">{{ mainUrl }}/reset-password</a>
+        to reset your password. Once you have successfully changed your
+        password, you will be able to log in to the
+        <a href="{{ mainUrl }}">{{ mainUrl }}</a> website immediately
+      </p>
+    </accordion-group>
+  </accordion>
+</div>

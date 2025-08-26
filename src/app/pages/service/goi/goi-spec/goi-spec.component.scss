@@ -1,0 +1,27 @@
+.mininum-spec,
+.recommended-spec {
+  line-height: 2;
+  h2 {
+    color: black;
+    text-shadow: 1px 0px 0px black;
+    padding-left: 6rem;
+    margin-bottom: 0;
+  }
+}
+
+.mininum-spec {
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 576px) {
+  .mininum-spec,
+  .recommended-spec {
+    h2 {
+      padding-left: 0;
+      text-align: center;
+    }
+  }
+  .qa-detail-wrapper p {
+    text-indent: 0rem;
+  }
+}

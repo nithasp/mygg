@@ -1,0 +1,49 @@
+{
+  "profile": {
+    "title": "บัญชี MYGG",
+    "sub_title": "รายละเอียดส่วนบุคคล",
+    "sidebar": {
+      "profile": "Profile",
+      "inbox": "กล่องจดหมาย",
+      "topup": "เติมเงิน",
+      "redemption": "กรอกรหัสแลกรับ",
+      "purchase_history": "ประวัติการสั่งซื้อ",
+      "support": "ฝ่ายช่วยเหลือ",
+      "ticket_history": "หมวดหมู่",
+      "sign_out": "ออกจากระบบ"
+    },
+    "form": {
+      "username": "ชื่อผู้ใช้",
+      "email": {
+        "title": "อีเมล",
+        "note": "คุณสามารถใช้ที่อยู่อีเมลนี้เพื่อกู้คืนรหัสผ่านของคุณ"
+      },
+
+      "firstname": "ชื่อ",
+      "lastname": "นามสกุล",
+      "date_of_birth": "วันเกิด",
+      "country": "ประเทศ",
+      "country_code": "รหัสโทรศัพท์",
+      "phone_number": "เบอร์มือถือ",
+      "gender": {
+        "title": "เพศ",
+        "male": "ชาย",
+        "female": "หญิง",
+        "optional": "ไม่เปิดเผย"
+      },
+
+      "error": {
+        "required": "โปรดกรอกรายละเอียดให้ครบถ้วน",
+
+        "email": {
+          "pattern": "รูปแบบอีเมลไม่ถูกต้อง"
+        },
+        "mobile_number": {
+          "pattern": "หมายเลขโทรศัพท์ต้องเป็นตัวเลขเท่านั้น"
+        }
+      }
+    },
+    "cancel": "ยกเลิก",
+    "submit": "บันทึก"
+  }
+}

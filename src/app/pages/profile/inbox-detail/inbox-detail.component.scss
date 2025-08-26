@@ -1,0 +1,72 @@
+.inner {
+  padding: 32px 49.93px 48px 40px;
+}
+.inbox-detail-section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .back-btn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    svg {
+      margin-right: 10px;
+    }
+    span {
+      color: #051640;
+      font-family: 'Myriad-Pro-SemiBold';
+      font-size: 16px;
+    }
+  }
+  .trash-icon {
+    width: 21.067px;
+    height: 24px;
+    cursor: pointer;
+  }
+}
+.inbox-detail-section2 {
+  margin-top: 32px;
+  h1 {
+    color: #000;
+    font-family: 'Myriad-Pro-SemiBold';
+    font-size: 40px;
+  }
+  img {
+    height: auto;
+  }
+  .date {
+    color: #000;
+
+    font-size: 24px;
+  }
+  .content {
+    margin-top: 16px;
+    font-size: 16px;
+  }
+  .content.has-image {
+    display: grid;
+    grid-template-columns: 26.7vw 1fr;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1536px) {
+  .inbox-detail-section2 {
+    .content.has-image {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .inner {
+    padding: 32px 25px 41px 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .inner {
+    padding: 32px 14px 38px 14px;
+  }
+}

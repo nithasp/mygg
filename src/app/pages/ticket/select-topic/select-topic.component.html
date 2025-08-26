@@ -1,0 +1,42 @@
+<div id="select-topic" class="topic">
+  <div class="sub-inner">
+    <div class="title">
+      <img
+        src="../../../../assets/images/ticket/UI_Create_mobile 1.png"
+        alt="ticket-icon"
+      />
+      <h1 [innerHTML]="'ticket.select_categories.title' | translate">
+        Select Ticket Category
+      </h1>
+    </div>
+    <div class="select-topic">
+      <h3 [innerHTML]="'ticket.select_categories.select_title' | translate">
+        Select category
+      </h3>
+      <div class="select">
+        <app-mygg-select
+          optionPlaceholder="Select"
+          [optionItems]="topics"
+          (changeTopic)="handleTopic($event)"
+        ></app-mygg-select>
+      </div>
+      <div class="button-wrapper">
+        <button
+          class="btn-border"
+          routerLink="/profile"
+          [innerHTML]="'ticket.back' | translate"
+        >
+          Back
+        </button>
+        <button
+          class="btn-filled"
+          [disabled]="!currentTopic"
+          (click)="changePage()"
+          [innerHTML]="'ticket.next' | translate"
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

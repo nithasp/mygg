@@ -1,0 +1,14 @@
+{
+  "sign_in": {
+    "title": "Sign In",
+    "username": "Username",
+    "password": "Password",
+    "forgot_password": "Forgot your password?",
+    "social_login": "OR SIGN IN WITH YOUR SOCIAL MEDIA ACCOUNT",
+    "text1": "Don’t have an account yet?",
+    "register": "Register",
+    "error": {
+      "required": "The field is required."
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "topup": {
+    "complete": {
+      "text1": "ชำระเงินสำเร็จ!",
+      "text2": "Payment No.",
+      "text3": "Transaction time:",
+      "button": "กลับสู่หน้าหลัก"
+    },
+    "failed": {
+      "text1": "การทำธุรกรรมล้มเหลว",
+      "text2": "โปรดลองวิธีการชำระแบบอื่น",
+      "try_button": "ลองอีกครั้ง",
+      "cancel_button": "ยกเลิก"
+    }
+  }
+}

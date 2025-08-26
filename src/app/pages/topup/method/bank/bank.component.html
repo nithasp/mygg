@@ -1,0 +1,53 @@
+<div id="bank">
+  <div class="inner">
+    <div
+      class="bank-content mt-8 pl-20 pr-44 py-20 bg-white shadow-[0px_8px_12.5px_0.5px_#020e26] flex justify-center"
+    >
+      <div class="bank-section1 text-center">
+        <div class="payment-ref1">
+          <div class="no">Payment No. (Ref.1)</div>
+          <div class="code">XXXXXXXXXX</div>
+        </div>
+        <div class="qr-code">
+          <img
+            src="assets/images/method/bank/Layer 19.png"
+            alt="qr-code"
+            class="w-auto mx-auto"
+          />
+        </div>
+        <div class="payment-ref2 mt-10">
+          <div class="no">Payment No. (Ref.2)</div>
+          <div class="barcode">
+            <img
+              src="assets/images/method/bank/Layer 20.png"
+              alt="bar-code"
+              class="w-auto mx-auto"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="bank-section2 text-center pl-20">
+        <div class="amount">
+          <div class="title">Amount (THB)</div>
+          <div class="price text-right">{{ amount.toFixed(2) || 0 }}</div>
+        </div>
+        <div class="date">
+          <span class="block">Please pay before</span>
+          <span class="block">DD/MM/YYYY HH:MM:SS</span>
+        </div>
+      </div>
+    </div>
+
+    <mygg-back-button
+      class="absolute bottom-0 left-4"
+      (click)="backToChooseMethodPage()"
+    ></mygg-back-button>
+
+    <barcode-button
+      class="absolute bottom-4 right-20 cursor-pointer"
+      textValue="PRINT"
+      (click)="bankPay()"
+    ></barcode-button>
+  </div>
+</div>

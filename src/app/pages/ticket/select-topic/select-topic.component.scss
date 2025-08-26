@@ -1,0 +1,29 @@
+#select-topic {
+  min-height: 554px;
+}
+
+.topic {
+  max-width: 854px !important;
+}
+
+.title {
+  padding-top: 172px;
+  margin-bottom: 0 !important;
+}
+
+.select-topic {
+  margin-top: 13px;
+  h3 {
+    margin-bottom: 8px;
+  }
+}
+
+.button-wrapper {
+  margin-top: 40px;
+}
+
+@media (max-width: 576px) {
+  #select-topic {
+    min-height: auto;
+  }
+}

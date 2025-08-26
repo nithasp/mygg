@@ -1,0 +1,48 @@
+<div class="mygg-select container" #ticketSelect>
+  <div class="select-box" [ngClass]="isOptionDirty ? 'dirty' : ''">
+    <div
+      class="options-container"
+      [ngClass]="isOptionsContainerActive === true ? 'active' : ''"
+    >
+      <div class="wrapper">
+        <div
+          class="option"
+          *ngFor="let item of optionItems"
+          [ngClass]="item.name === optionValue ? 'active' : ''"
+          (click)="handleSelect(item)"
+        >
+          <input
+            type="radio"
+            class="radio"
+            id="{{ item.id }}"
+            name="{{ item.name }}"
+          />
+          <label for="{{ item.name }}">{{ item.name }}</label>
+          <div class="active-icon">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="17"
+              viewBox="0 0 16 17"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M13.3657 4.73431C13.6781 5.04673 13.6781 5.55327 13.3657 5.86569L6.96571 12.2657C6.65329 12.5781 6.14676 12.5781 5.83434 12.2657L2.63434 9.06569C2.32192 8.75327 2.32192 8.24673 2.63434 7.93431C2.94676 7.6219 3.45329 7.6219 3.76571 7.93431L6.40002 10.5686L12.2343 4.73431C12.5468 4.4219 13.0533 4.4219 13.3657 4.73431Z"
+                fill="#06246C"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="selected"
+      (click)="isOptionsContainerActive = !isOptionsContainerActive"
+    >
+      <span class="placeholder-text">{{ optionPlaceholder || 'Select' }}</span>
+    </div>
+  </div>
+</div>

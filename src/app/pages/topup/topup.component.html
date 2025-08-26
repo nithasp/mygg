@@ -1,0 +1,35 @@
+<section id="topup">
+  <div class="inner">
+    <div class="topup-banner">
+      <swiper [config]="topupBannerConfig" class="h-full">
+        <ng-template
+          swiperSlide
+          *ngFor="let item of topupBanner; let i = index; let last = last"
+        >
+          <div
+            class="content"
+            [style.background-image]="'url(' + item.image + ')'"
+          >
+            <!-- <div
+              class="text text-center text-white text-[6xl] md:text-[179px] absolute-center w-full"
+            >
+              {{ item.text }} {{ i !== 0 ? i + 1 : '' }}
+            </div> -->
+          </div>
+        </ng-template>
+      </swiper>
+      <div class="topup-pagination text-center mt-3"></div>
+    </div>
+    <div class="welcome-wrapper">
+      <app-welcome></app-welcome>
+    </div>
+    <div class="method">
+      <div class="item" *ngFor="let item of method" [routerLink]="item.url">
+        <div class="logo">
+          <img [src]="item.image" [alt]="item.name" />
+        </div>
+        <div class="name">{{ language === 'en' ? item.name : item.name_th }}</div>
+      </div>
+    </div>
+  </div>
+</section>

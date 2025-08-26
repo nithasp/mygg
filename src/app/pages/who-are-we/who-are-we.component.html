@@ -1,0 +1,126 @@
+<section
+  id="who-are-we"
+  class="main-page bg-[url('/assets/images/who-are-we/BG.jpg')] bg-auto bg-no-repeat"
+>
+  <div class="container relative">
+    <div class="introduction text-center flex-center min-h-screen">
+      <div class="wrapper relative top-[8.8vw] w-full px-8">
+        <div
+          class="title mb-8 font-['Bauhaus93-Regular'] text-[4.2rem] tracking-[1rem] leading-[17vw] light-intense-white xs:text-[7.2rem] xl:mb-0 xl:text-[10.2rem]"
+        >
+          {{ 'about_us.section1.title' | translate }}
+          <span class="text-[#143d8d]">M</span>
+          <span class="text-[#fcb134]">YGG</span>
+        </div>
+        <div
+          class="content relative top-[-4vw] font-['Myriad-Pro-Bold'] text-[1.4rem] text-[#05173d] light-intense-white leading-[2.1rem] xs:text-[1.8rem] xs:leading-[3.1rem] xl:text-[2.4rem]"
+          [innerHTML]="'about_us.section1.content' | translate"
+        ></div>
+      </div>
+    </div>
+    <div class="works mt-[17.5rem]">
+      <div class="work1 work relative">
+        <div class="work-image w-full h-[1200px] md:h-auto">
+          <img src="../../../assets/images/who-are-we/Banner_YGG.png" />
+        </div>
+        <div class="work-content">
+          <div class="logo">
+            <img src="../../../assets/images/who-are-we/Logo_YGGdrazil.png" />
+          </div>
+          <div class="text">
+            <p [innerHTML]="'about_us.section2.item1' | translate"></p>
+          </div>
+        </div>
+      </div>
+      <div class="work2 work relative">
+        <div class="work-content">
+          <div class="logo">
+            <img src="../../../assets/images/who-are-we/Maco.png" />
+          </div>
+          <div
+            class="text"
+            [innerHTML]="'about_us.section2.item2' | translate"
+          ></div>
+        </div>
+
+        <div class="work-image w-full h-[1200px] md:h-auto">
+          <img src="../../../assets/images/who-are-we/Banner_Maco.png" />
+        </div>
+      </div>
+    </div>
+    <div class="our-awards relative xl:mt-[-30vw]">
+      <div class="wrapper w-[75%] mx-auto my-0 grid grid-cols-1 gap-8">
+        <div
+          class="our-awards-item1 grid grid-cols-1 items-center text-center 2xl:grid-cols-[0.52fr_1fr]"
+        >
+          <div
+            class="title font-['Myriad-Pro-Bold'] text-[3.6rem] text-[#081a3f]"
+          >
+            {{ 'about_us.section3.title' | translate }}
+          </div>
+          <div class="main-image">
+            <img src="../../../assets/images/who-are-we/AdSTARS3.png" />
+          </div>
+        </div>
+        <div class="our-awards-item2 grid grid-cols-3 gap-9">
+          <div class="sub-image w-full h-full">
+            <img src="../../../assets/images/who-are-we/AdSTARS.png" />
+          </div>
+          <div class="sub-image w-full h-full">
+            <img src="../../../assets/images/who-are-we/AdSTARS22.png" />
+          </div>
+          <div class="sub-image w-full h-full">
+            <img src="../../../assets/images/who-are-we/AdSTARS4.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="address my-10 static font-['Myriad-Pro-Bold'] text-[1.5rem]">
+      <div
+        class="wrapper w-9/12 mx-auto my-0 grid grid-cols-1 2xl:grid-cols-[auto_1.5fr]"
+      >
+        <div class="address-item1">
+          <div class="map">
+            <img
+              src="../../../assets/images/who-are-we/Location.png"
+              class="w-full 2xl:w-[88%]"
+              alt="map"
+            />
+          </div>
+        </div>
+        <div
+          class="address-item2 relative grid grid-cols-1 text-center pt-12 md:grid-cols-2 2xl:pt-0 2xl:text-left 2xl:gap-16"
+        >
+          <div class="info1 2xl:-ml-4">
+            <div class="info1-1 mb-4 2xl:mb-12">
+              <p
+                class="title text-[#163f8d] tracking-[0.2rem]"
+                [innerHTML]="'about_us.section4.address1.1' | translate"
+              ></p>
+              <p>
+                {{'about_us.section4.address1.2' | translate}}
+              </p>
+            </div>
+            <div class="info1-2">
+              <p>{{'about_us.section4.address1.email' | translate}}</p>
+              <p>{{'about_us.section4.address1.tel' | translate}}</p>
+            </div>
+          </div>
+          <div class="info2 relative mt-12 md:mt-0 2xl:left-12">
+            <p class="title text-[#163f8d] tracking-[0.2rem]"[innerHTML]="'about_us.section4.address2.1' | translate" >
+               
+            </p>
+            <div class="contact1 mt-6">
+              <p>{{'about_us.section4.address2.2.name' | translate}}</p>
+              <p>{{'about_us.section4.address2.2.email' | translate}}</p>
+            </div>
+            <div class="contact2 mt-12">
+              <p>{{'about_us.section4.address2.3.name' | translate}}</p>
+              <p>{{'about_us.section4.address2.3.email' | translate}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,59 @@
+<div id="process">
+  <div class="inner flex-center">
+    <!-- Wait -->
+    <div class="content wait text-center" *ngIf="process === 'wait'">
+      <div class="wait-icon">
+        <img
+          src="/assets/images/method/process/wait.png"
+          alt="wait-icon"
+          class="w-[auto] h-[auto] mx-auto"
+        />
+      </div>
+      <div class="msg msg1">Please wait!</div>
+      <div class="msg msg2 -mt-2">Your transaction is progressing!</div>
+      <div class="msg msg3">
+        Please do not close this window during transaction.
+      </div>
+    </div>
+
+    <!-- Error -->
+    <div class="content error text-center" *ngIf="process === 'error'">
+      <div class="error-icon">
+        <img
+          src="/assets/images/method/process/Triangle 6168.png"
+          alt="error-icon"
+          class="w-[auto] h-[auto] mx-auto"
+        />
+      </div>
+      <div class="msg msg1">Transaction failed</div>
+      <div class="msg msg3">Please try a different payment method.</div>
+      <div class="submit-button mt-4">
+        <button (click)="backToTopupPage()">Try again</button>
+      </div>
+    </div>
+
+    <!-- Success -->
+    <div class="content success text-center" *ngIf="process === 'success'">
+      <div class="success-icon">
+        <img
+          src="/assets/images/method/process/success.png"
+          alt="success-icon"
+          class="w-[auto] h-[auto] mx-auto"
+        />
+      </div>
+      <div class="msg msg1">Top-up successful!</div>
+      <div class="msg msg2">Transition ID : XXXXXXXXXXXXXXXXXXXX</div>
+      <div class="msg msg3">
+        <span>Payment</span>
+        <span>THB {{ amount || '0' }}</span>
+      </div>
+      <div class="msg msg4 -mt-1">
+        <span>Payment Method</span>
+        <span class="capitalize">{{purchaseMethod || 'none'}}</span>
+      </div>
+      <div class="submit-button mt-4">
+        <button (click)="backToTopupPage()">Back</button>
+      </div>
+    </div>
+  </div>
+</div>

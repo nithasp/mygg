@@ -1,0 +1,111 @@
+<section id="sign-in">
+  <div class="sign-in-container">
+    <div class="content">
+      <h1 class="title" [innerHTML]="'sign_in.title' | translate">SIGN IN</h1>
+      <form class="sign-in-form" [formGroup]="signInForm" (ngSubmit)="signIn()">
+        <div class="form-wrapper">
+          <div class="username item">
+            <div class="input-wrapper">
+              <label for="username" [innerHTML]="'sign_in.username' | translate"
+                >Username</label
+              >
+              <input
+                class=""
+                id="username"
+                type="text"
+                placeholder="Placeholder"
+                formControlName="username"
+              />
+            </div>
+
+            <div class="error-msg" *ngIf="username.invalid && username.touched">
+              <small
+                class="text-error"
+                *ngIf="username.errors?.['required']"
+                [innerHTML]="'sign_in.error.required' | translate"
+                >The field is required.</small
+              >
+            </div>
+          </div>
+          <div class="password item">
+            <div class="input-wrapper">
+              <label for="password" [innerHTML]="'sign_in.password' | translate"
+                >Password</label
+              >
+              <input
+                class=""
+                id="password"
+                type="password"
+                placeholder="Placeholder"
+                formControlName="password"
+              />
+            </div>
+            <div class="error-msg" *ngIf="password.invalid && password.touched">
+              <small
+                class="text-error"
+                *ngIf="password.errors?.['required']"
+                [innerHTML]="'sign_in.error.required' | translate"
+                >The field is required.</small
+              >
+            </div>
+          </div>
+        </div>
+        <div class="sign-in-button">
+          <button
+            type="submit"
+            class="btn-filled"
+            [innerHTML]="'sign_in.title' | translate"
+          >
+            Sign in
+          </button>
+        </div>
+        <!-- <div class="forgot-password">
+          <a routerLink="/reset-password"> Forgot your password? </a>
+        </div> -->
+        <!-- <div class="social-login">
+          <div class="text">OR SIGN IN WITH YOUR SOCIAL MEDIA ACCOUNT</div>
+          <div class="icon-wrapper">
+            <div class="mygg social-icon">
+              <img
+                src="../../../assets/images/sign-up/UI_Mygg.png"
+                alt="mygg-icon"
+              />
+            </div>
+            <div class="facebook social-icon">
+              <img
+                src="../../../assets/images/sign-up/UI_fb.png"
+                alt="mygg-icon"
+              />
+            </div>
+            <div class="twitter social-icon">
+              <img
+                src="../../../assets/images/sign-up/UI_tw.png"
+                alt="mygg-icon"
+              />
+            </div>
+            <div class="google social-icon">
+              <img
+                src="../../../assets/images/sign-up/UI_GG.png"
+                alt="mygg-icon"
+              />
+            </div>
+          </div>
+        </div> -->
+        <div class="line"></div>
+        <div class="sign-up">
+          <div class="text" [innerHTML]="'sign_in.text1' | translate">
+            Don’t have an account yet?
+          </div>
+          <button
+            type="button"
+            class="btn-border"
+            routerLink="/sign-up"
+            [innerHTML]="'sign_in.register' | translate"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

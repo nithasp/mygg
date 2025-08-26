@@ -1,0 +1,14 @@
+{
+  "purchase_history": {
+    "title": "Purchase History",
+    "total": "Total Spent:",
+    "currency": "THB",
+    "table": {
+      "no": "No.",
+      "date": "Date",
+      "detail": "Detail",
+      "payment_method": "Payment Method",
+      "amount": "Amount"
+    }
+  }
+}

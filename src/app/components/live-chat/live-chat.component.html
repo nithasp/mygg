@@ -1,0 +1,51 @@
+<div id="live-chat" class="relative">
+  <div class="live-chat-container">
+    <div
+      class="icon w-[92px] h-auto cursor-pointer"
+      (click)="isChatBoxDisplay = !isChatBoxDisplay"
+    >
+      <img src="../../../assets/images/icons/LiveChat_noActive.png" />
+    </div>
+  </div>
+
+  <div
+    class="chatbox absolute top-0 left-0 max-w-[400px] rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl"
+    [ngClass]="isChatBoxDisplay ? 'active' : ''"
+  >
+    <div class="chatbox-container flex flex-col">
+      <div
+        class="chatbox-header flex justify-between pl-5 pr-3 py-4 rounded-tl-2xl rounded-tr-2xl"
+      >
+        <div class="icon w-[70px] h-[70px] rounded-full"></div>
+        <div
+          class="close-button flex-center w-[20px] h-[20px] bg-white rounded-full cursor-pointer"
+        >
+          <div class="wrapper">
+            <div class="line"></div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+      <div class="chatbox-body h-[300px] overflow-auto">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab voluptate
+        reprehenderit magnam eos. Iure, accusamus repudiandae provident alias
+        magnam cupiditate unde culpa dolore nisi consectetur expedita recusandae
+        velit earum consequuntur. Lorem ipsum dolor sit, amet consectetur
+        adipisicing elit. Ab voluptate reprehenderit magnam eos. Iure, accusamus
+        repudiandae provident alias magnam cupiditate unde culpa dolore nisi
+        consectetur expedita recusandae velit earum consequuntur. Lorem ipsum
+        dolor sit, amet consectetur adipisicing elit. Ab voluptate reprehenderit
+        magnam eos. Iure, accusamus repudiandae provident alias magnam
+        cupiditate unde culpa dolore nisi consectetur expedita recusandae velit
+        earum consequuntur.
+      </div>
+      <div
+        class="chatbox-footer flex-center px-8 py-4 rounded-bl-2xl rounded-br-2xl"
+      >
+        <div class="message-wrapper rounded-3xl">
+          <textarea class="w-full h-auto resize-none p-4" rows="1"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

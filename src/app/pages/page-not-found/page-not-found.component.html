@@ -1,0 +1,21 @@
+<section id="page-not-found">
+  <div class="inner">
+    <div class="wrapper">
+      <div class="404-icon">
+        <img
+          src="../../../assets/images/page-not-found/404.png"
+          alt="404-icon"
+        />
+      </div>
+      <h1 [innerHTML]="'page_not_found.text1' | translate"></h1>
+      <p [innerHTML]="'page_not_found.text2' | translate"></p>
+      <div class="back-btn">
+        <button
+          class="btn-filled"
+          routerLink="/"
+          [innerHTML]="'page_not_found.button' | translate"
+        ></button>
+      </div>
+    </div>
+  </div>
+</section>

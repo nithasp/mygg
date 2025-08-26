@@ -1,0 +1,109 @@
+<div id="linepay">
+  <div class="linepay-step1 inner relative" *ngIf="!linepayStep2">
+    <div
+      class="linepay-content mt-14 py-5 bg-white shadow-[0px_8px_12.5px_0.5px_#020e26] grid grid-cols-[0.75fr_1fr] min-h-screen"
+    >
+      <div class="order-details font-['Myriad-Pro-Bold'] px-6">
+        <div
+          class="title text-[#051640] text-[47px] tracking-[4.7px] text-center mb-6"
+        >
+          Order Details
+        </div>
+        <div
+          class="coin-value text-[#051640] text-[28px] tracking-[2.8px] text-center -mb-3"
+        >
+          {{ amount || 0 }}THB
+        </div>
+        <div class="coin-logo">
+          <img
+            src="../../../../../assets/images/method/Fn_big_shadow.png"
+            alt="coin-logo"
+            class="w-auto h-auto mx-auto"
+          />
+        </div>
+        <div class="details text-[29.5px] tracking-[2.95px]">
+          <div class="detail">
+            <span>Current Balance : </span>
+            <span>XXXX Coins</span>
+          </div>
+          <div class="detail">
+            <span>Buying :</span>
+            <span>{{ coinPoint || '0' }} Coins</span>
+          </div>
+          <div class="detail">
+            <span>New Balance :</span>
+            <span>XXXX Coins</span>
+          </div>
+          <div class="detail">
+            <span>Total :</span>
+            <span>THB XXXX</span>
+          </div>
+        </div>
+      </div>
+      <div class="payment-info">
+        <div
+          class="title text-[#051640] text-[47px] tracking-[4.7px] text-center font-['Myriad-Pro-Bold']"
+        >
+          Payment Information
+        </div>
+
+        <div class="payment-info-content p-[0_4.5rem]">
+          <div class="methods text-center py-0">
+            <a
+              class="item cursor-pointer inline-block p-[1.5rem_0.5rem] rounded-[15px] bg-white border-4 border-solid border-[#05173d]"
+            >
+              <img
+                src="/assets/images/method/linepay_logo_238x78_v4_th-1024x293.png"
+                alt="linepay-wallet-logo"
+                class="w-auto h-auto"
+              />
+            </a>
+          </div>
+
+          <div class="payment-time grid grid-cols-[1fr_auto] mt-1 mb-2">
+            <span class="text-[22.5px] tracking-[2.45px] text-[#051640]"
+              >please complete the payment before</span
+            >
+            <span
+              class="text-[24.5px] tracking-[2.45px] text-[#051640] font-['Myriad-Pro-Bold']"
+              >00:15:00</span
+            >
+          </div>
+
+          <div class="barcode-button-visa flex justify-center cursor-pointer">
+            <barcode-button
+              textValue="NEXT"
+              paddingValue="0 30px"
+              (click)="changeMethod(true, 'linepayStep2')"
+            ></barcode-button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <mygg-back-button
+      (click)="backToChooseMethodPage()"
+      class="absolute bottom-0 left-0"
+    ></mygg-back-button>
+  </div>
+
+  <div
+    class="linepay-step2 inner relative cursor-pointer"
+    *ngIf="linepayStep2"
+    (click)="linePay()"
+  >
+    <div class="inner bg-[#f7f7f7] min-h-screen flex-center">
+      <div class="linepay-step2-content">
+        <img
+          src="/assets/images/method/linepay/messageImage_1679653951528.png"
+          alt="linepay"
+          class="w-auto h-auto"
+        />
+      </div>
+      <!-- <mygg-back-button
+        (click)="changeMethod(false, 'linepay')"
+        class="absolute bottom-0 left-0"
+      ></mygg-back-button> -->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,109 @@
+#career {
+  background: url('../../../assets/images/career/career-bg.jpg') no-repeat;
+  background-position: initial;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 152px 0 160px 0;
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: 'Myriad-Pro-SemiBold';
+  font-size: 52px;
+  text-align: center;
+}
+
+.inner {
+  padding: 0 30px;
+}
+.wrapper {
+  margin: 40px auto 0 auto;
+  padding: 40px 35px;
+  max-width: 1437px;
+  width: 100%;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 8px;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0 auto 16px auto;
+    padding: 16px 35px 12px 24px;
+    max-width: 1146px;
+    width: 100%;
+    cursor: pointer;
+  }
+  .item:last-of-type {
+    margin: 0 auto 0 auto;
+  }
+}
+
+.content {
+  .title {
+    font-family: 'Myriad-Pro-SemiBold';
+    margin-bottom: 2px;
+  }
+  .location {
+    font-size: 12px;
+  }
+}
+
+.no-career {
+  padding: 105px 0 85px 0;
+  text-align: center;
+  h2 {
+    font-family: 'Myriad-Pro-SemiBold';
+    color: #000;
+    font-size: 40px;
+    line-height: 130%;
+  }
+  p {
+    max-width: 576px;
+    width: 100%;
+    margin: 16px auto 40px auto;
+    color: #000;
+    font-size: 24px;
+  }
+  button {
+    padding: 8px 16px;
+    max-width: 204px;
+    width: 100%;
+    height: 38px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .no-career {
+    padding: 96px 0 96px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 40px;
+  }
+  .inner {
+    padding: 0 20px;
+  }
+  .wrapper {
+    padding: 24px 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .no-career {
+    padding: 40px 0 40px 0;
+    h2 {
+      font-size: 32px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+}

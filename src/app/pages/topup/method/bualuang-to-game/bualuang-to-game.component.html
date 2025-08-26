@@ -1,0 +1,95 @@
+<div id="bualuang-to-game">
+  <div class="inner relative">
+    <div
+      class="bualuang-to-game-content mt-14 py-5 bg-white shadow-[0px_8px_12.5px_0.5px_#020e26] grid grid-cols-[0.75fr_1fr] min-h-screen"
+    >
+      <div class="order-details font-['Myriad-Pro-Bold'] px-6">
+        <div
+          class="title text-[#051640] text-[47px] tracking-[4.7px] text-center mb-6"
+        >
+          Order Details
+        </div>
+        <div
+          class="coin-value text-[#051640] text-[28px] tracking-[2.8px] text-center -mb-3"
+        >
+          {{ amount || 0 }}THB
+        </div>
+        <div class="coin-logo">
+          <img
+            src="../../../../../assets/images/method/Fn_big_shadow.png"
+            alt="coin-logo"
+            class="w-auto h-auto mx-auto"
+          />
+        </div>
+        <div class="details text-[29.5px] tracking-[2.95px]">
+          <div class="detail">
+            <span>Current Balance : </span>
+            <span>XXXX Coins</span>
+          </div>
+          <div class="detail">
+            <span>Buying :</span>
+            <span>{{ coinPoint || '0' }} Coins</span>
+          </div>
+          <div class="detail">
+            <span>New Balance :</span>
+            <span>XXXX Coins</span>
+          </div>
+          <div class="detail">
+            <span>Total :</span>
+            <span>THB XXXX</span>
+          </div>
+        </div>
+      </div>
+      <div class="payment-info">
+        <div
+          class="title text-[#051640] text-[47px] tracking-[4.7px] text-center font-['Myriad-Pro-Bold']"
+        >
+          Payment Information
+        </div>
+
+        <div class="payment-info-content p-[2rem_4.5rem]">
+          <div class="card-type flex mb-4">
+            <div class="bualuang-type flex items-center">
+              <label class="radio-container">
+                <input type="radio" name="radio" checked="checked" />
+                <span class="checkmark"></span>
+              </label>
+              <img
+                src="../../../../../assets/images/method/bualuang/bualuang.png"
+                alt="mastercard-logo"
+                class="w-auto h-auto mx-auto"
+              />
+            </div>
+          </div>
+          <div class="card-info">
+            <div class="form-group">
+              <label for="mobile-number">Mobile Number :</label>
+              <input type="text" id="mobile-number" class="w-full" />
+            </div>
+          </div>
+
+          <div class="save-info flex mr-12">
+            <label class="checkbox-container">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <span>Save for my next payment</span>
+          </div>
+
+          <div class="barcode-button-visa flex justify-center cursor-pointer">
+            <barcode-button
+              textValue="NEXT"
+              paddingValue="0 30px"
+              (click)="bualuangToGamePay()"
+            ></barcode-button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <mygg-back-button
+      (click)="backToChooseMethodPage()"
+      class="absolute bottom-0 left-0"
+    ></mygg-back-button>
+  </div>
+</div>

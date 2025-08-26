@@ -1,0 +1,46 @@
+{
+  "reset_password": {
+    "step1": {
+      "title": "RESET YOUR PASSWORD",
+      "text": "Please provide the email address that you used when you signed up for your account. If you forgot your email, Please contact us.",
+      "email": {
+        "title": "Email",
+        "error": {
+          "required": "This field is required",
+          "pattern": "Email is invalid"
+        }
+      },
+      "text2": "We will send you an email that will allow you to reset your password.",
+      "button": "Reset password"
+    },
+    "step2": {
+      "title": "CHANGE PASSWORD",
+      "text": "Please enter the code sent to your email address and new your password.",
+      "password": {
+        "title": "Code",
+        "error": {
+          "required": "This field is required"
+        }
+      },
+      "new_password": {
+        "title": "New Password",
+        "error": {
+          "required": "This field is required",
+          "pattern": "The password must be between 8-16 characters, consisting of a mixture of English alphabets, numbers or symbols.",
+          "min": "The password must be between 8-16 characters, consisting of a mixture of English alphabets, numbers or symbols.",
+          "max": "The password must be between 8-16 characters, consisting of a mixture of English alphabets, numbers or symbols."
+        }
+      },
+      "confirm_password": {
+        "title": "Confirm Password",
+        "error": {
+          "required": "This field is required",
+          "must_match": "Password and Confirm Password do not match."
+        }
+
+        
+      },
+      "button": "Change password"
+    }
+  }
+}

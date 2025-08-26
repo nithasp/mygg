@@ -1,0 +1,18 @@
+{
+  "career": {
+    "title": "CAREER"
+  },
+  "career_info": {
+    "back": "Back",
+    "qualifications": "Qualifications:",
+    "responsibilities": "Responsibilities:",
+    "skills": "Skill Sets:",
+    "text1": "Interested in joining the fun with us?",
+    "text2": "Feel free to send your resume and portfolio to the following email address: <a href='mailto:recruit@ygg-cg.com'>recruit@ygg-cg.com</a>"
+  },
+  "no_career": {
+    "text1": "There are currently no new job openings available.",
+    "text2": "You can stay updated on job openings through our website and Facebook page: MYGG",
+    "back": "Return to the main page."
+  }
+}

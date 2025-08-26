@@ -1,0 +1,88 @@
+<!-- <section id="method" class="min-h-max py-24 bg-no-repeat">
+  <div
+    class="inner relative w-full mx-auto px-5 max-w-[1320px]"
+    [ngClass]="[
+      method === 'bank' ? containerWidth : '',
+      method === 'linepayStep2' ? containerWidth : '',
+      method === 'process' ? containerWidth : ''
+    ]"
+  >
+    <div
+      class="welcome"
+      *ngIf="!(method === 'linepayStep2' || method === 'process')"
+    >
+      <app-welcome maxWidthValue="100%"></app-welcome>
+    </div>
+
+    <div
+      class="choose-methods mt-14 px-32 pt-5 pb-14 bg-white shadow-[0px_8px_12.5px_0.5px_#020e26]"
+      *ngIf="!isMethodDisplay"
+    >
+      <div class="method-section1">
+        <div
+          class="title text-[#051640] text-[47px] tracking-[4.7px] text-center font-['Myriad-Pro-Bold']"
+        >
+          Select Purchase Method
+        </div>
+        <div class="methods grid grid-cols-4 gap-4 py-6">
+          <a
+            class="item cursor-pointer flex-center 
+            py-[10px] rounded-[15px] bg-white border-4 border-solid border-[#05173d]
+            {{ method.name }}
+            "
+            *ngFor="let method of paymentMethods"
+            routerLink="{{ method.name }}"
+            (click)="handleMethod(method.name)"
+          >
+            <img
+              src="{{ method.image }}"
+              alt="{{ method.name }}"
+              class="w-auto h-auto"
+            />
+          </a>
+        </div>
+        <div class="line bg-[#112349] w-full h-[5px] mt-4"></div>
+      </div>
+      <div class="method-section2 pt-3 pb-20">
+        <div
+          class="title text-[#051640] text-[47px] tracking-[4.7px] text-center font-['Myriad-Pro-Bold'] mb-5"
+        >
+          Select MYGG Coins
+        </div>
+        <div class="mygg-coins">
+          <div class="coin cursor-pointer" *ngFor="let coin of myggCoins">
+            <div
+              class="coin-points text-white text-right font-['Myriad-Pro-Bold'] tracking-[2.25px] pr-4 mb-2"
+            >
+              <span class="text-[22.5px]">THB</span>
+              <span class="text-[24.5px]">{{ coin.points }}</span>
+            </div>
+            <div class="coin-logo">
+              <img
+                src="assets/images/method/Fn_big.png"
+                alt="coin-logo"
+                class="w-[131px] h-[152px] mx-auto"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <mygg-back-button
+        class="absolute bottom-0 left-8"
+        routerLink="/topup"
+      ></mygg-back-button>
+      <barcode-button
+        class="absolute bottom-5 right-[3.2rem] cursor-pointer"
+        textValue="NEXT"
+      ></barcode-button>
+    </div>
+
+    <div class="payment-method" *ngIf="method !== 'process'">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="process" *ngIf="method === 'process'">
+      <app-process></app-process>
+    </div>
+  </div>
+</section> -->

@@ -1,0 +1,155 @@
+#about-us {
+  background: url('../../../assets/images/about-us/BG_AboutUs\ 1.jpg') no-repeat;
+  background-position: initial;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 355px 0 69px 0;
+}
+
+.about-us-section1 {
+  text-align: center;
+  max-width: 874px;
+  margin: 0 auto 120px auto;
+
+  p {
+    color: #fff;
+    font-size: 32px;
+    margin-top: 40px;
+    line-height: 140%;
+  }
+}
+.about-us-section2 {
+  .logo {
+    img {
+      width: auto;
+      margin: 0 auto;
+    }
+  }
+  p {
+    font-size: 24px;
+    line-height: 140%;
+  }
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 854px;
+  gap: 135px;
+  align-items: center;
+  padding: 0 100px;
+  .small-logo {
+    img {
+      width: auto;
+    }
+  }
+}
+
+.item.yggdrazil {
+  .content {
+    border-radius: 8px;
+    background: rgba(5, 22, 64, 0.5);
+    padding: 49px 61px 50px 51px;
+  }
+  .text {
+    p:first-child {
+      margin: 24px 0 45px 0;
+    }
+  }
+  p {
+    color: #fff;
+  }
+  .small-logo {
+    img {
+      width: 266px;
+    }
+  }
+}
+.item:nth-child(even) {
+  direction: rtl;
+  gap: 76px;
+  margin-top: 54px;
+  .content {
+    text-align: -webkit-left;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 81px 61px 80px 55px;
+  }
+  .text {
+    margin-top: 24px;
+  }
+  p {
+    unicode-bidi: plaintext;
+  }
+}
+
+@media (max-width: 1700px) {
+  .about-us-section1 {
+    margin: 0 auto 80px auto;
+  }
+  .item {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .item:nth-child(even) {
+    gap: 40px;
+  }
+}
+@media (max-width: 1024px) {
+  #about-us {
+    padding: 192px 0 112px 0;
+    background-position: center;
+  }
+  .about-us-section1 {
+    max-width: 512px;
+    p {
+      font-size: 24px;
+    }
+  }
+
+  .item {
+    padding: 0 30px;
+    .content {
+      padding: 47px 37px 52px 37px !important;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  #about-us {
+    padding: 152px 0 63px 0;
+    background-position: center;
+  }
+
+  .about-us-section1 {
+    max-width: 512px;
+    margin-bottom: 23px;
+    .wrapper {
+      padding: 0 20px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+  .about-us-section2 {
+    padding: 29px 18px 28px 18px;
+    p {
+      font-size: 16px;
+    }
+  }
+  .item {
+    padding: 0 2px;
+    .content {
+      padding: 29px 18px 28px 18px !important;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .about-us-section2 {
+    .small-logo {
+      img {
+        width: 164px;
+      }
+    }
+  }
+}
